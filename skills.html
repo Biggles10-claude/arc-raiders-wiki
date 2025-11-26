@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Skills Guide - All 45 skills across 3 trees. Recommended builds and progression paths.">
+  <title>Skills - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          ARC RAIDERS
+          <span>━━ WIKI ━━</span>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+
+      <!-- Favorites -->
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title">
+            <span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span>
+          </div>
+        </div>
+        <ul class="favorites-list">
+          <li class="favorites-empty">No favorites yet</li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">&#x2302;</span> Home
+          </a>
+          <a href="overview.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C8;</span> Overview
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link">
+            <span class="nav-link-icon">&#x25CE;</span> Maps
+          </a>
+          <a href="weapons.html" class="nav-link">
+            <span class="nav-link-icon">&#x2694;</span> Weapons
+          </a>
+          <a href="enemies.html" class="nav-link">
+            <span class="nav-link-icon">&#x2620;</span> Enemies
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link active">
+            <span class="nav-link-icon">&#x25C6;</span> Skills
+          </a>
+          <a href="crafting.html" class="nav-link">
+            <span class="nav-link-icon">&#x2699;</span> Crafting
+          </a>
+          <a href="traders.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C7;</span> Traders
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link">
+            <span class="nav-link-icon">&#x2191;</span> Extraction
+          </a>
+          <a href="tips.html" class="nav-link">
+            <span class="nav-link-icon">&#x2726;</span> Tips
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link">
+            <span class="nav-link-icon">&#x2630;</span> Lore
+          </a>
+        </div>
+      </nav>
+
+      <!-- Tools -->
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn">
+          <span>&#x2699;</span> Loadout Builder
+        </button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list">
+            <li><span class="text-dim">-</span></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Skills</span>
+          </div>
+          <h1 class="page-title">Skill Trees & Progression</h1>
+          <p class="page-subtitle">45 skills. 75 max points. No free respecs.</p>
+        </section>
+
+        <!-- Priority Build Path -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Recommended Progression</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card progression-card">
+            <div class="progression-phases">
+              <div class="phase">
+                <div class="phase-level">Levels 1-15</div>
+                <div class="phase-focus">Mobility Focus</div>
+                <div class="phase-points">~28 points</div>
+              </div>
+              <div class="phase-arrow">&#x2192;</div>
+              <div class="phase">
+                <div class="phase-level">Levels 16-30</div>
+                <div class="phase-focus">Add Conditioning</div>
+                <div class="phase-points">~20 points</div>
+              </div>
+              <div class="phase-arrow">&#x2192;</div>
+              <div class="phase">
+                <div class="phase-level">Levels 31-50</div>
+                <div class="phase-focus">Unlock Survival</div>
+                <div class="phase-points">In-Round Crafting at 36</div>
+              </div>
+              <div class="phase-arrow">&#x2192;</div>
+              <div class="phase">
+                <div class="phase-level">Level 50+</div>
+                <div class="phase-focus">Fill Remaining</div>
+                <div class="phase-points">Specialize</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skill Rating Legend -->
+        <section class="mb-4">
+          <div class="card-grid card-grid-3">
+            <div class="card rating-card">
+              <span class="skill-rating essential">ESSENTIAL</span>
+              <p class="text-secondary">Get ASAP - core to any build</p>
+            </div>
+            <div class="card rating-card">
+              <span class="skill-rating important">IMPORTANT</span>
+              <p class="text-secondary">Get early-mid game</p>
+            </div>
+            <div class="card rating-card">
+              <span class="skill-rating situational">SITUATIONAL</span>
+              <p class="text-secondary">Optional, depends on playstyle</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mobility Tree -->
+        <section class="mb-4" id="mobility">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="tree-icon mobility">&#x1F3C3;</span>
+              Mobility Tree
+            </h2>
+            <div class="section-line"></div>
+          </div>
+
+          <p class="tree-description">Speed, stamina efficiency, and traversal. The most important tree for all builds.</p>
+
+          <div class="card">
+            <div class="skill-tier">
+              <div class="tier-header">Tier 1 (Entry)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Nimble Climber</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Faster climb and vault speed. Required to progress.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 2 (5-10 points)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Marathon Runner</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Movement costs less stamina. Critical for survival.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Youthful Lungs</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Increased maximum stamina pool.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Proper Breathing</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Faster stamina regeneration.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 3 (10-20 points)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Effortless Roll</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Dodge rolls cost less stamina. Key for PvP.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Calming Stroll</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Stamina regenerates while walking.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Carry the Momentum</div>
+                  <span class="skill-rating situational">SITUATIONAL</span>
+                  <div class="skill-desc">Speed boost after dodging.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 4 (20-30 points)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Vault on Vaults</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Zero stamina cost for vaulting.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Light Feet</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Faster sprint speed.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Nimble Recovery</div>
+                  <span class="skill-rating situational">SITUATIONAL</span>
+                  <div class="skill-desc">Faster stamina recovery after depletion.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Conditioning Tree -->
+        <section class="mb-4" id="conditioning">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="tree-icon conditioning">&#x1F4AA;</span>
+              Conditioning Tree
+            </h2>
+            <div class="section-line"></div>
+          </div>
+
+          <p class="tree-description">Toughness, recovery, and weight management. Essential for combat builds.</p>
+
+          <div class="card">
+            <div class="skill-tier">
+              <div class="tier-header">Tier 1 (Entry)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Used to the Weight</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Less shield speed penalty. Required to progress.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 2</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Gentle Pressure</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Quieter breaching. Great for stealth.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Proficient Pryer</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Faster breaching speed.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Heavier Hitter</div>
+                  <span class="skill-rating situational">SITUATIONAL</span>
+                  <div class="skill-desc">Increased melee damage.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 3 (15 points)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Survivor's Stamina</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Faster stamina regen when hurt.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Fight or Flight</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Auto stamina regen at low HP.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Unburdened Roll</div>
+                  <span class="skill-rating situational">SITUATIONAL</span>
+                  <div class="skill-desc">Free dodge when shield breaks.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 4 & Advanced (36+ points)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Downed but Determined</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Longer bleed-out timer. Team play essential.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Back on Your Feet</div>
+                  <span class="skill-rating situational">SITUATIONAL</span>
+                  <div class="skill-desc">Health regen at critical HP.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Fly Swatter</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">One-hit melee on Ticks and Wasps.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Survival Tree -->
+        <section class="mb-4" id="survival">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="tree-icon survival">&#x1F392;</span>
+              Survival Tree
+            </h2>
+            <div class="section-line"></div>
+          </div>
+
+          <p class="tree-description">Scavenging, stealth, and field crafting. Late-game power spikes.</p>
+
+          <div class="card">
+            <div class="skill-tier">
+              <div class="tier-header">Tier 1 (Entry)</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Agile Croucher</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Faster crouch movement. Required to progress.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 2</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Looter's Instincts</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Faster item identification.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Silent Scavenger</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Quieter looting. Huge for stealth.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Broad Shoulders</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Increased carry capacity.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 3</div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-name">Just Another Plant</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Harder for ARC to spot when crouching.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Revitalizing Squat</div>
+                  <span class="skill-rating situational">SITUATIONAL</span>
+                  <div class="skill-desc">Stamina regen while crouching.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tier">
+              <div class="tier-header">Tier 4 (36 points) - GAME CHANGERS</div>
+              <div class="skill-list">
+                <div class="skill-item highlight">
+                  <div class="skill-name">In-Round Crafting</div>
+                  <span class="skill-rating essential">CRITICAL</span>
+                  <div class="skill-desc">Craft bandages, shield cells, and grenades during raids. Changes everything.</div>
+                </div>
+                <div class="skill-item highlight">
+                  <div class="skill-name">Security Breach</div>
+                  <span class="skill-rating essential">ESSENTIAL</span>
+                  <div class="skill-desc">Access Security Lockers for high-tier loot.</div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-name">Traveling Tinkerer</div>
+                  <span class="skill-rating important">IMPORTANT</span>
+                  <div class="skill-desc">Expanded field crafting options.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recommended Builds -->
+        <section id="builds">
+          <div class="section-header">
+            <h2 class="section-title">Recommended Builds</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card build-card">
+              <div class="build-name">Solo Survivor</div>
+              <div class="build-focus">Self-Sufficiency</div>
+              <ul class="build-skills">
+                <li>Max Mobility (all essential skills)</li>
+                <li>Gentle Pressure + Silent Scavenger (stealth)</li>
+                <li>In-Round Crafting (self-heal/sustain)</li>
+                <li>Revitalizing Squat + Calming Stroll</li>
+              </ul>
+              <p class="build-desc">Designed for running alone. Sustainability, stealth, and self-reliance.</p>
+            </div>
+
+            <div class="card build-card">
+              <div class="build-name">Team Support</div>
+              <div class="build-focus">Group Utility</div>
+              <ul class="build-skills">
+                <li>Mobility essentials</li>
+                <li>Downed but Determined + Turtle Crawl</li>
+                <li>Traveling Tinkerer (craft for team)</li>
+                <li>Broad Shoulders maxed (carry team loot)</li>
+              </ul>
+              <p class="build-desc">Built to keep your squad alive and well-supplied.</p>
+            </div>
+
+            <div class="card build-card">
+              <div class="build-name">PvP Hunter</div>
+              <div class="build-focus">Combat Dominance</div>
+              <ul class="build-skills">
+                <li>Max Mobility + Combat Conditioning</li>
+                <li>Fight or Flight + Survivor's Stamina</li>
+                <li>Skip crafting, focus on combat sustainability</li>
+                <li>Light Feet for aggressive positioning</li>
+              </ul>
+              <p class="build-desc">Built to find and eliminate other Raiders.</p>
+            </div>
+
+            <div class="card build-card">
+              <div class="build-name">Speed Looter</div>
+              <div class="build-focus">Maximum Efficiency</div>
+              <ul class="build-skills">
+                <li>All Mobility skills</li>
+                <li>All Survival looting skills</li>
+                <li>Broad Shoulders maxed</li>
+                <li>Security Breach for extra loot</li>
+              </ul>
+              <p class="build-desc">In fast, loot everything, out faster. Maximum extraction value.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Overview - Learn about the PvPvE extraction shooter from Embark Studios. Core concepts, gameplay loop, and key features.">
+  <title>Overview - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          ARC RAIDERS
+          <span>━━ WIKI ━━</span>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+
+      <!-- Favorites -->
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title">
+            <span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span>
+          </div>
+        </div>
+        <ul class="favorites-list">
+          <li class="favorites-empty">No favorites yet</li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">&#x2302;</span> Home
+          </a>
+          <a href="overview.html" class="nav-link active">
+            <span class="nav-link-icon">&#x25C8;</span> Overview
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link">
+            <span class="nav-link-icon">&#x25CE;</span> Maps
+          </a>
+          <a href="weapons.html" class="nav-link">
+            <span class="nav-link-icon">&#x2694;</span> Weapons
+          </a>
+          <a href="enemies.html" class="nav-link">
+            <span class="nav-link-icon">&#x2620;</span> Enemies
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C6;</span> Skills
+          </a>
+          <a href="crafting.html" class="nav-link">
+            <span class="nav-link-icon">&#x2699;</span> Crafting
+          </a>
+          <a href="traders.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C7;</span> Traders
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link">
+            <span class="nav-link-icon">&#x2191;</span> Extraction
+          </a>
+          <a href="tips.html" class="nav-link">
+            <span class="nav-link-icon">&#x2726;</span> Tips
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link">
+            <span class="nav-link-icon">&#x2630;</span> Lore
+          </a>
+        </div>
+      </nav>
+
+      <!-- Tools -->
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn">
+          <span>&#x2699;</span> Loadout Builder
+        </button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list">
+            <li><span class="text-dim">-</span></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Overview</span>
+          </div>
+          <h1 class="page-title">What is ARC Raiders?</h1>
+          <p class="page-subtitle">The ultimate third-person PvPvE extraction shooter from Embark Studios</p>
+        </section>
+
+        <!-- Game Info Card -->
+        <section class="mb-4">
+          <div class="card card-highlight">
+            <div class="game-info-grid">
+              <div class="game-info-item">
+                <div class="game-info-label">Developer</div>
+                <div class="game-info-value">Embark Studios</div>
+              </div>
+              <div class="game-info-item">
+                <div class="game-info-label">Platforms</div>
+                <div class="game-info-value">PC, PS5, Xbox Series X|S</div>
+              </div>
+              <div class="game-info-item">
+                <div class="game-info-label">Release</div>
+                <div class="game-info-value">October 30, 2025</div>
+              </div>
+              <div class="game-info-item">
+                <div class="game-info-label">Price</div>
+                <div class="game-info-value">$40</div>
+              </div>
+              <div class="game-info-item">
+                <div class="game-info-label">Genre</div>
+                <div class="game-info-value">Third-Person PvPvE Extraction Shooter</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Core Concepts -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Core Concepts</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <div class="concept-icon text-safe">&#x2302;</div>
+              <h3 class="concept-title">Speranza</h3>
+              <p class="text-secondary">Your underground home base. A thriving community beneath the ruins of Italy where you craft gear, accept quests from traders, and prepare for the dangers above.</p>
+            </div>
+
+            <div class="card">
+              <div class="concept-icon text-rust">&#x25CE;</div>
+              <h3 class="concept-title">The Rust Belt</h3>
+              <p class="text-secondary">The dangerous surface world. Five distinct maps filled with loot, hostile ARC machines, and other Raiders. Post-apocalyptic Italy reclaimed by nature.</p>
+            </div>
+
+            <div class="card">
+              <div class="concept-icon text-danger">&#x2694;</div>
+              <h3 class="concept-title">PvPvE Combat</h3>
+              <p class="text-secondary">Fight ARC machines AND other players. Every raid is a dynamic mix of environmental threats, AI enemies, and human opponents with their own agendas.</p>
+            </div>
+
+            <div class="card">
+              <div class="concept-icon text-caution">&#x2191;</div>
+              <h3 class="concept-title">Extraction</h3>
+              <p class="text-secondary">Keep what you loot - but only if you extract alive. Die and you lose everything not in your Safe Pocket. The stakes are always real.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gameplay Loop -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">The Gameplay Loop</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <div class="gameplay-loop">
+              <div class="loop-step">
+                <div class="loop-number">1</div>
+                <div class="loop-content">
+                  <div class="loop-title">Prepare in Speranza</div>
+                  <p>Craft gear, select loadout, accept quests</p>
+                </div>
+              </div>
+              <div class="loop-arrow">&#x2192;</div>
+              <div class="loop-step">
+                <div class="loop-number">2</div>
+                <div class="loop-content">
+                  <div class="loop-title">Drop Topside</div>
+                  <p>Choose map, spawn into the Rust Belt</p>
+                </div>
+              </div>
+              <div class="loop-arrow">&#x2192;</div>
+              <div class="loop-step">
+                <div class="loop-number">3</div>
+                <div class="loop-content">
+                  <div class="loop-title">Scavenge & Fight</div>
+                  <p>Loot containers, battle ARC and Raiders</p>
+                </div>
+              </div>
+              <div class="loop-arrow">&#x2192;</div>
+              <div class="loop-step">
+                <div class="loop-number">4</div>
+                <div class="loop-content">
+                  <div class="loop-title">Extract</div>
+                  <p>Escape via elevator or hatch, keep your loot</p>
+                </div>
+              </div>
+              <div class="loop-arrow">&#x21BA;</div>
+              <div class="loop-step loop-repeat">
+                <div class="loop-content">
+                  <div class="loop-title text-rust">Repeat</div>
+                  <p>Bank gains, upgrade gear, go again</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Key Features</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-4">
+            <div class="card feature-card">
+              <div class="feature-value">30</div>
+              <div class="feature-label">Minute Raids</div>
+            </div>
+            <div class="card feature-card">
+              <div class="feature-value">Solo/Duo/Trio</div>
+              <div class="feature-label">Team Options</div>
+            </div>
+            <div class="card feature-card">
+              <div class="feature-value">21</div>
+              <div class="feature-label">Players Per Server</div>
+            </div>
+            <div class="card feature-card">
+              <div class="feature-value">Persistent</div>
+              <div class="feature-label">Progression</div>
+            </div>
+            <div class="card feature-card">
+              <div class="feature-value">Workshop</div>
+              <div class="feature-label">Crafting System</div>
+            </div>
+            <div class="card feature-card">
+              <div class="feature-value">Free</div>
+              <div class="feature-label">Loadout Option</div>
+            </div>
+            <div class="card feature-card">
+              <div class="feature-value">Dynamic</div>
+              <div class="feature-label">Map Conditions</div>
+            </div>
+            <div class="card feature-card">
+              <div class="feature-value">Cross</div>
+              <div class="feature-label">Platform Play</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sales & Reviews -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Reception</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-4">
+            <div class="card stat-card-large">
+              <div class="stat-value-large text-safe">4M+</div>
+              <div class="stat-label-large">Copies Sold</div>
+            </div>
+            <div class="card stat-card-large">
+              <div class="stat-value-large text-caution">400K+</div>
+              <div class="stat-label-large">Concurrent Players</div>
+            </div>
+            <div class="card stat-card-large">
+              <div class="stat-value-large text-rust">Nominated</div>
+              <div class="stat-label-large">Game Awards</div>
+            </div>
+            <div class="card stat-card-large">
+              <div class="stat-value-large text-danger">#1</div>
+              <div class="stat-label-large">Extraction Shooter 2025</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- What Makes It Different -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">What Makes It Different</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <div class="accordion active">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                Third-Person Perspective
+              </div>
+              <div class="accordion-content">
+                <p>Unlike most extraction shooters, ARC Raiders uses a third-person camera. This changes everything - you can see around corners, check your six, and appreciate the incredible world Embark built. It also makes parkour and traversal feel more fluid and rewarding.</p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                ARC Machines as Genuine Threats
+              </div>
+              <div class="accordion-content">
+                <p>The AI enemies aren't just fodder - they're genuinely dangerous. A Rocketeer will ruin your day. A Bastion requires strategy. The Queen needs multiple squads. PvE matters as much as PvP, and smart Raiders know when to avoid fights entirely.</p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                Free Loadout System
+              </div>
+              <div class="accordion-content">
+                <p>Completely broke? Take a Free Loadout - basic gear at zero cost. No Safe Pockets (you lose everything if you die), but zero investment means zero risk. Perfect for learning, scouting, or gearing up from nothing.</p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                NASA-Punk Aesthetic
+              </div>
+              <div class="accordion-content">
+                <p>The visual style is unique: cowboy dusters meet astronaut helmets. Post-apocalyptic Italy with 70s space age vibes. It's called "NASA-Punk" - bold, colorful, hopeful despite the danger. Not grimdark, but not naive either.</p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                Speranza as a Living Hub
+              </div>
+              <div class="accordion-content">
+                <p>Your home base isn't just menus - it's a place. Walk through neighborhoods, chat with traders, see other Raiders preparing for drops. Speranza has personality: Apollo runs a kids' football team, Lance does midnight karaoke, the library grows with community efforts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Next Steps</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-3">
+            <a href="weapons.html" class="card card-link">
+              <div class="link-card-icon">&#x2694;</div>
+              <div class="link-card-title">Browse Weapons</div>
+              <p class="text-secondary">Find your perfect loadout</p>
+            </a>
+            <a href="maps.html" class="card card-link">
+              <div class="link-card-icon">&#x25CE;</div>
+              <div class="link-card-title">Explore Maps</div>
+              <p class="text-secondary">Learn the Rust Belt</p>
+            </a>
+            <a href="tips.html" class="card card-link">
+              <div class="link-card-icon">&#x2726;</div>
+              <div class="link-card-title">Read Tips</div>
+              <p class="text-secondary">Survive your first raids</p>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

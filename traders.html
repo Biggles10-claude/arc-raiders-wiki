@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Traders Guide - All 5 traders, their quests, and what they sell in Speranza.">
+  <title>Traders - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">ARC RAIDERS<span>━━ WIKI ━━</span></div>
+      </div>
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title"><span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span></div>
+        </div>
+        <ul class="favorites-list"><li class="favorites-empty">No favorites yet</li></ul>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link"><span class="nav-link-icon">&#x2302;</span> Home</a>
+          <a href="overview.html" class="nav-link"><span class="nav-link-icon">&#x25C8;</span> Overview</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link"><span class="nav-link-icon">&#x25CE;</span> Maps</a>
+          <a href="weapons.html" class="nav-link"><span class="nav-link-icon">&#x2694;</span> Weapons</a>
+          <a href="enemies.html" class="nav-link"><span class="nav-link-icon">&#x2620;</span> Enemies</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link"><span class="nav-link-icon">&#x25C6;</span> Skills</a>
+          <a href="crafting.html" class="nav-link"><span class="nav-link-icon">&#x2699;</span> Crafting</a>
+          <a href="traders.html" class="nav-link active"><span class="nav-link-icon">&#x25C7;</span> Traders</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link"><span class="nav-link-icon">&#x2191;</span> Extraction</a>
+          <a href="tips.html" class="nav-link"><span class="nav-link-icon">&#x2726;</span> Tips</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link"><span class="nav-link-icon">&#x2630;</span> Lore</a>
+        </div>
+      </nav>
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn"><span>&#x2699;</span> Loadout Builder</button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list"><li><span class="text-dim">-</span></li></ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main-content">
+        <section class="page-header">
+          <div class="breadcrumb"><a href="index.html">Home</a> / <span>Traders</span></div>
+          <h1 class="page-title">Traders & Quests</h1>
+          <p class="page-subtitle">5 Traders. 66+ Quests. Your path to wealth and power.</p>
+        </section>
+
+        <!-- Trader Cards -->
+        <section class="mb-4">
+          <!-- Celeste -->
+          <div class="card trader-card mb-3" id="celeste">
+            <div class="trader-header">
+              <div class="trader-avatar">&#x1F451;</div>
+              <div class="trader-info">
+                <h2 class="trader-name">Celeste</h2>
+                <div class="trader-role">Leader of Speranza</div>
+              </div>
+              <div class="trader-quests">15+ Quests</div>
+            </div>
+            <div class="trader-body">
+              <div class="trader-personality">
+                <strong>Personality:</strong> Charismatic, strategic, symbol of hope. Lost her home multiple times to ARC. Founded Speranza and continues preparing evacuation plans.
+              </div>
+              <div class="trader-section">
+                <h4>Sells</h4>
+                <ul class="sells-list">
+                  <li>Gun Parts (Light, Medium, Heavy)</li>
+                  <li>Wires</li>
+                  <li>Batteries</li>
+                  <li>Basic crafting materials</li>
+                  <li>Essential resources</li>
+                </ul>
+              </div>
+              <div class="trader-section">
+                <h4>Key Quests</h4>
+                <ul class="quest-list">
+                  <li>"A First Foothold" (starter quest)</li>
+                  <li>"Look for any ARC Courier or Probe"</li>
+                  <li>Various exploration missions</li>
+                </ul>
+              </div>
+              <div class="trader-lore">
+                <strong>Lore Role:</strong> Your main quest giver. Unfolds the story of Speranza and the ARC threat.
+              </div>
+            </div>
+          </div>
+
+          <!-- Tian Wen -->
+          <div class="card trader-card mb-3" id="tian-wen">
+            <div class="trader-header">
+              <div class="trader-avatar">&#x1F52B;</div>
+              <div class="trader-info">
+                <h2 class="trader-name">Tian Wen</h2>
+                <div class="trader-role">Gun Craftsman</div>
+              </div>
+              <div class="trader-quests">12+ Quests</div>
+            </div>
+            <div class="trader-body">
+              <div class="trader-personality">
+                <strong>Personality:</strong> Reclusive, prefers tools to people. Wears a mask - only eyes visible. Disdainful of most Raiders but secretly has a soft spot for repairs.
+              </div>
+              <div class="trader-section">
+                <h4>Sells</h4>
+                <ul class="sells-list">
+                  <li>Weapons (daily rotation)</li>
+                  <li>Weapon blueprints</li>
+                  <li>Gun Parts</li>
+                  <li>Weapon mods</li>
+                  <li>Ammunition</li>
+                </ul>
+              </div>
+              <div class="trader-section">
+                <h4>Key Quests</h4>
+                <ul class="quest-list">
+                  <li>"Broken Monument" (find Tian Wen's items)</li>
+                  <li>Weapon testing missions</li>
+                  <li>Blueprint delivery quests</li>
+                </ul>
+              </div>
+              <div class="trader-tip">
+                <strong>Trading Tip:</strong> Check daily for rare weapon blueprints!
+              </div>
+            </div>
+          </div>
+
+          <!-- Apollo -->
+          <div class="card trader-card mb-3" id="apollo">
+            <div class="trader-header">
+              <div class="trader-avatar">&#x1F4A3;</div>
+              <div class="trader-info">
+                <h2 class="trader-name">Apollo</h2>
+                <div class="trader-role">Traveling Mechanic</div>
+              </div>
+              <div class="trader-quests">14+ Quests</div>
+            </div>
+            <div class="trader-body">
+              <div class="trader-personality">
+                <strong>Personality:</strong> Cryptic about his past. "Not his first rodeo." Wants to make everywhere better. Runs kids' football team and stocks the library.
+              </div>
+              <div class="trader-section">
+                <h4>Sells</h4>
+                <ul class="sells-list">
+                  <li>Grenades (Impact, Gas, Blaze)</li>
+                  <li>Mines</li>
+                  <li>C4</li>
+                  <li>Tactical gadgets</li>
+                  <li>Explosive components</li>
+                </ul>
+              </div>
+              <div class="trader-section">
+                <h4>Key Quests</h4>
+                <ul class="quest-list">
+                  <li>"Eliminate 2 ARC with grenades"</li>
+                  <li>"Use Fireball Burner to eliminate ARC"</li>
+                  <li>"Use Trigger Nade on Hornet"</li>
+                  <li>"Find espresso machine parts"</li>
+                  <li>"Deliver books to Library"</li>
+                </ul>
+              </div>
+              <div class="trader-lore">
+                <strong>Lore Role:</strong> Community builder with a mysterious past.
+              </div>
+            </div>
+          </div>
+
+          <!-- Lance -->
+          <div class="card trader-card mb-3" id="lance">
+            <div class="trader-header">
+              <div class="trader-avatar">&#x1F916;</div>
+              <div class="trader-info">
+                <h2 class="trader-name">Lance</h2>
+                <div class="trader-role">Android Medic</div>
+              </div>
+              <div class="trader-quests">10+ Quests</div>
+            </div>
+            <div class="trader-body">
+              <div class="trader-personality">
+                <strong>Personality:</strong> Eccentric, bubbly, tries hard to fit in with humans. Suffers from amnesia. Loves midnight karaoke (off-pitch), fashion, and boxing.
+              </div>
+              <div class="trader-section">
+                <h4>Sells</h4>
+                <ul class="sells-list">
+                  <li>Medical supplies (bandages, medkits)</li>
+                  <li>Shield Rechargers</li>
+                  <li>Augments (all types)</li>
+                  <li>Medical components</li>
+                </ul>
+              </div>
+              <div class="trader-special">
+                <h4>&#x2B50; SPECIAL FEATURE</h4>
+                <p><strong>Trade Free Loadout Augment for better augment!</strong></p>
+                <ol>
+                  <li>Take Free Loadout</li>
+                  <li>Extract successfully</li>
+                  <li>Trade gray augment to Lance</li>
+                  <li>Receive green augment (Combat/Looting/Tactical Mk.1)</li>
+                </ol>
+                <p class="text-safe">Repeat until you have good starter gear!</p>
+              </div>
+              <div class="trader-lore">
+                <strong>Lore Mystery:</strong> Lost memories slowly returning... what will he remember?
+              </div>
+            </div>
+          </div>
+
+          <!-- Shani -->
+          <div class="card trader-card mb-3" id="shani">
+            <div class="trader-header">
+              <div class="trader-avatar">&#x1F6E1;</div>
+              <div class="trader-info">
+                <h2 class="trader-name">Shani</h2>
+                <div class="trader-role">Head of Security</div>
+              </div>
+              <div class="trader-quests">18+ Quests</div>
+            </div>
+            <div class="trader-body">
+              <div class="trader-personality">
+                <strong>Personality:</strong> Paranoid (for good reason). Has contingency plans for contingency plans. Celeste's biggest tactical resource. ARC expert.
+              </div>
+              <div class="trader-section">
+                <h4>Sells</h4>
+                <ul class="sells-list">
+                  <li>Ziplines</li>
+                  <li>Snap Hooks</li>
+                  <li><strong>Hatch Keys (DAILY - one per day!)</strong></li>
+                  <li>Gadgets</li>
+                  <li>Security tools</li>
+                </ul>
+              </div>
+              <div class="trader-section">
+                <h4>Key Quests</h4>
+                <ul class="quest-list">
+                  <li>"Fix Field Depot antenna"</li>
+                  <li>"Fix Raider Hatch hydraulics"</li>
+                  <li>"Deliver Field Crate to Supply Station"</li>
+                  <li>"Eliminate Wasp, Hornet, Snitch - return parts"</li>
+                  <li>"Deliver LiDar scanner to Jiangsu warehouse"</li>
+                </ul>
+              </div>
+              <div class="trader-tip">
+                <strong>Daily Purchase:</strong> Hatch Key (one per day, buy early!)
+              </div>
+              <div class="trader-lore">
+                <strong>Lore Role:</strong> Knows more about ARC than anyone. What isn't she telling us?
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quest System -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Quest System Guide</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card mb-3">
+            <h4>How Quests Work</h4>
+            <ol class="numbered-list">
+              <li>Accept from trader in Speranza</li>
+              <li>Complete objectives topside</li>
+              <li>Return to trader to turn in</li>
+              <li>Receive rewards: XP, materials, weapons, blueprints, cosmetics</li>
+            </ol>
+          </div>
+
+          <div class="card mb-3">
+            <h4>Helpful Mechanics</h4>
+            <div class="card-grid card-grid-2">
+              <div>
+                <p><strong>Team Shared:</strong> Teammate actions count toward your objectives!</p>
+                <ul>
+                  <li>Kills</li>
+                  <li>Container looting</li>
+                  <li>Objectives</li>
+                </ul>
+              </div>
+              <div>
+                <p><strong>Item Trading:</strong> Drop items on ground for teammates</p>
+                <p><strong>Keep Rewards:</strong> Most quests let you keep required items after completion</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Quest Types</h4>
+            <div class="quest-types">
+              <div class="quest-type">
+                <div class="quest-type-name">Collection</div>
+                <p>"Collect 6 Wires and a Battery"</p>
+                <p class="text-secondary">Tip: Use Watchlist feature</p>
+              </div>
+              <div class="quest-type">
+                <div class="quest-type-name">Elimination</div>
+                <p>"Eliminate 3 ARC" / "Kill specific enemy types"</p>
+                <p class="text-secondary">Tip: Team kills count!</p>
+              </div>
+              <div class="quest-type">
+                <div class="quest-type-name">Exploration</div>
+                <p>"Discover location X" / "Visit specific POI"</p>
+                <p class="text-secondary">Tip: Use Free Loadout for scouting</p>
+              </div>
+              <div class="quest-type">
+                <div class="quest-type-name">Delivery</div>
+                <p>"Deliver Field Crate to Supply Station"</p>
+                <p class="text-secondary">Tip: Put quest items in Safe Pocket</p>
+              </div>
+              <div class="quest-type">
+                <div class="quest-type-name">Multi-Stage</div>
+                <p>Multiple objectives across different maps</p>
+                <p class="text-secondary">Highest rewards!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quest Count Summary -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Total Quest Count</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Trader</th>
+                  <th>Quest Count</th>
+                  <th>Focus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Celeste</strong></td>
+                  <td>15+</td>
+                  <td>Story, exploration</td>
+                </tr>
+                <tr>
+                  <td><strong>Tian Wen</strong></td>
+                  <td>12+</td>
+                  <td>Weapons, combat</td>
+                </tr>
+                <tr>
+                  <td><strong>Apollo</strong></td>
+                  <td>14+</td>
+                  <td>Explosives, community</td>
+                </tr>
+                <tr>
+                  <td><strong>Lance</strong></td>
+                  <td>10+</td>
+                  <td>Medical, survival</td>
+                </tr>
+                <tr>
+                  <td><strong>Shani</strong></td>
+                  <td>18+</td>
+                  <td>Security, intel</td>
+                </tr>
+                <tr class="total-row">
+                  <td><strong>TOTAL</strong></td>
+                  <td><strong>66+</strong></td>
+                  <td>More coming in updates</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Weapons Database - Complete tier list, damage stats, and recommended loadouts for all 19+ weapons.">
+  <title>Weapons - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          ARC RAIDERS
+          <span>━━ WIKI ━━</span>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+
+      <!-- Favorites -->
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title">
+            <span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span>
+          </div>
+        </div>
+        <ul class="favorites-list">
+          <li class="favorites-empty">No favorites yet</li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">&#x2302;</span> Home
+          </a>
+          <a href="overview.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C8;</span> Overview
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link">
+            <span class="nav-link-icon">&#x25CE;</span> Maps
+          </a>
+          <a href="weapons.html" class="nav-link active">
+            <span class="nav-link-icon">&#x2694;</span> Weapons
+          </a>
+          <a href="enemies.html" class="nav-link">
+            <span class="nav-link-icon">&#x2620;</span> Enemies
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C6;</span> Skills
+          </a>
+          <a href="crafting.html" class="nav-link">
+            <span class="nav-link-icon">&#x2699;</span> Crafting
+          </a>
+          <a href="traders.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C7;</span> Traders
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link">
+            <span class="nav-link-icon">&#x2191;</span> Extraction
+          </a>
+          <a href="tips.html" class="nav-link">
+            <span class="nav-link-icon">&#x2726;</span> Tips
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link">
+            <span class="nav-link-icon">&#x2630;</span> Lore
+          </a>
+        </div>
+      </nav>
+
+      <!-- Tools -->
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn">
+          <span>&#x2699;</span> Loadout Builder
+        </button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list">
+            <li><span class="text-dim">-</span></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Weapons</span>
+          </div>
+          <h1 class="page-title">Weapons Database</h1>
+          <p class="page-subtitle">19+ weapons. Master your arsenal.</p>
+        </section>
+
+        <!-- Ammo Types Guide -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Ammo Types</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-5">
+            <div class="card ammo-card">
+              <div class="ammo-icon heavy">H</div>
+              <div class="ammo-name">Heavy</div>
+              <div class="ammo-desc">Best ARC penetration</div>
+            </div>
+            <div class="card ammo-card">
+              <div class="ammo-icon medium">M</div>
+              <div class="ammo-name">Medium</div>
+              <div class="ammo-desc">Balanced all scenarios</div>
+            </div>
+            <div class="card ammo-card">
+              <div class="ammo-icon light">L</div>
+              <div class="ammo-name">Light</div>
+              <div class="ammo-desc">High fire rate, weak vs armor</div>
+            </div>
+            <div class="card ammo-card">
+              <div class="ammo-icon shotgun">S</div>
+              <div class="ammo-name">Shotgun</div>
+              <div class="ammo-desc">Devastating close range</div>
+            </div>
+            <div class="card ammo-card">
+              <div class="ammo-icon launcher">X</div>
+              <div class="ammo-name">Launcher</div>
+              <div class="ammo-desc">Explosive, rare</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- S-Tier Weapons -->
+        <section class="mb-4" id="s-tier">
+          <div class="section-header">
+            <h2 class="section-title"><span class="tier-badge tier-s">S</span> Meta Dominance</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="weapon-cards">
+            <!-- Ferro -->
+            <div class="card weapon-card" id="ferro">
+              <div class="weapon-header">
+                <div class="weapon-name">Ferro</div>
+                <div class="weapon-type">Break-Action Rifle</div>
+              </div>
+              <div class="weapon-stats">
+                <div class="weapon-stat">
+                  <span class="stat-label">Damage</span>
+                  <span class="stat-value text-danger">40</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Ammo</span>
+                  <span class="stat-value">Heavy</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Magazine</span>
+                  <span class="stat-value">1</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Rarity</span>
+                  <span class="rarity-common">Common</span>
+                </div>
+              </div>
+              <div class="weapon-details">
+                <div class="weapon-why">
+                  <strong>Why S-Tier:</strong> King of ARC killing. 40 damage + armor shredding at dirt cheap cost. Essential for Bastions and Rocketeers. Every Raider should own one.
+                </div>
+                <div class="weapon-meta">
+                  <span class="meta-tag">Best For: PvE</span>
+                  <span class="meta-tag">Mod Slots: 2</span>
+                  <span class="meta-tag">Cost: Very Low</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bettina -->
+            <div class="card weapon-card" id="bettina">
+              <div class="weapon-header">
+                <div class="weapon-name">Bettina</div>
+                <div class="weapon-type">Assault Rifle</div>
+              </div>
+              <div class="weapon-stats">
+                <div class="weapon-stat">
+                  <span class="stat-label">Damage</span>
+                  <span class="stat-value text-danger">28</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Ammo</span>
+                  <span class="stat-value">Heavy</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Magazine</span>
+                  <span class="stat-value">30</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Rarity</span>
+                  <span class="rarity-epic">Epic</span>
+                </div>
+              </div>
+              <div class="weapon-details">
+                <div class="weapon-why">
+                  <strong>Why S-Tier:</strong> Best overall weapon. Smooth recoil, great accuracy, heavy ammo penetration. Full-auto with strong damage. Works everywhere.
+                </div>
+                <div class="weapon-meta">
+                  <span class="meta-tag">Best For: All-Round</span>
+                  <span class="meta-tag">Mod Slots: 3</span>
+                  <span class="meta-tag">Fire Rate: Full Auto</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Anvil -->
+            <div class="card weapon-card" id="anvil">
+              <div class="weapon-header">
+                <div class="weapon-name">Anvil</div>
+                <div class="weapon-type">Hand Cannon</div>
+              </div>
+              <div class="weapon-stats">
+                <div class="weapon-stat">
+                  <span class="stat-label">Damage</span>
+                  <span class="stat-value text-danger">45</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Ammo</span>
+                  <span class="stat-value">Heavy</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Magazine</span>
+                  <span class="stat-value">6</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Rarity</span>
+                  <span class="rarity-uncommon">Uncommon</span>
+                </div>
+              </div>
+              <div class="weapon-details">
+                <div class="weapon-why">
+                  <strong>Why S-Tier:</strong> Functions like a primary. One-tap potential on players. Shatters ARC armor. The essential sidearm - most Raiders never unequip it.
+                </div>
+                <div class="weapon-meta">
+                  <span class="meta-tag">Best For: Sidearm</span>
+                  <span class="meta-tag">One-Tap Potential</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vulcano -->
+            <div class="card weapon-card" id="vulcano">
+              <div class="weapon-header">
+                <div class="weapon-name">Vulcano</div>
+                <div class="weapon-type">Semi-Auto Shotgun</div>
+              </div>
+              <div class="weapon-stats">
+                <div class="weapon-stat">
+                  <span class="stat-label">Damage</span>
+                  <span class="stat-value text-danger">55</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Ammo</span>
+                  <span class="stat-value">Shotgun</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Magazine</span>
+                  <span class="stat-value">8</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Rarity</span>
+                  <span class="rarity-rare">Rare</span>
+                </div>
+              </div>
+              <div class="weapon-details">
+                <div class="weapon-why">
+                  <strong>Why S-Tier:</strong> Instant player deletion. Semi-auto means faster follow-ups than pump shotguns. Tight spread for consistent damage.
+                </div>
+                <div class="weapon-meta">
+                  <span class="meta-tag">Best For: PvP</span>
+                  <span class="meta-tag warning">Warning: Weak vs Armored ARC</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Venator -->
+            <div class="card weapon-card" id="venator">
+              <div class="weapon-header">
+                <div class="weapon-name">Venator</div>
+                <div class="weapon-type">Double-Shot Pistol</div>
+              </div>
+              <div class="weapon-stats">
+                <div class="weapon-stat">
+                  <span class="stat-label">Damage</span>
+                  <span class="stat-value text-danger">2x18</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Ammo</span>
+                  <span class="stat-value">Medium</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Magazine</span>
+                  <span class="stat-value">12</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Rarity</span>
+                  <span class="rarity-uncommon">Uncommon</span>
+                </div>
+              </div>
+              <div class="weapon-details">
+                <div class="weapon-why">
+                  <strong>Why S-Tier:</strong> Fires two bullets per trigger pull. Still top-tier even after nerfs. Close-range king that melts health bars.
+                </div>
+                <div class="weapon-meta">
+                  <span class="meta-tag">Best For: Close Range</span>
+                  <span class="meta-tag warning">Recent Nerf: Fire Rate + Weight</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hullcracker -->
+            <div class="card weapon-card" id="hullcracker">
+              <div class="weapon-header">
+                <div class="weapon-name">Hullcracker</div>
+                <div class="weapon-type">Grenade Launcher</div>
+              </div>
+              <div class="weapon-stats">
+                <div class="weapon-stat">
+                  <span class="stat-label">Damage</span>
+                  <span class="stat-value text-danger">100</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Ammo</span>
+                  <span class="stat-value">Launcher</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Magazine</span>
+                  <span class="stat-value">6</span>
+                </div>
+                <div class="weapon-stat">
+                  <span class="stat-label">Rarity</span>
+                  <span class="rarity-epic">Epic</span>
+                </div>
+              </div>
+              <div class="weapon-details">
+                <div class="weapon-why">
+                  <strong>Why S-Tier:</strong> Unmatched ARC destruction. Mandatory for Queen and Matriarch boss fights. 100 explosive damage per shot.
+                </div>
+                <div class="weapon-meta">
+                  <span class="meta-tag">Best For: Boss Killer</span>
+                  <span class="meta-tag">Cost: Very High</span>
+                  <span class="meta-tag">Ammo: Rare (Bastion Cells)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- A-Tier Weapons -->
+        <section class="mb-4" id="a-tier">
+          <div class="section-header">
+            <h2 class="section-title"><span class="tier-badge tier-a">A</span> Strong Contenders</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Weapon</th>
+                  <th>Type</th>
+                  <th>Damage</th>
+                  <th>Ammo</th>
+                  <th>Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Osprey</strong></td>
+                  <td>Assault Rifle</td>
+                  <td>24</td>
+                  <td>Medium</td>
+                  <td>Balanced combat</td>
+                </tr>
+                <tr>
+                  <td><strong>Renegade</strong></td>
+                  <td>SMG</td>
+                  <td>16</td>
+                  <td>Medium</td>
+                  <td>Close-mid range</td>
+                </tr>
+                <tr>
+                  <td><strong>Tempest</strong></td>
+                  <td>Assault Rifle</td>
+                  <td>18</td>
+                  <td>Light</td>
+                  <td>High fire rate</td>
+                </tr>
+                <tr>
+                  <td><strong>Il Toro</strong></td>
+                  <td>Pump Shotgun</td>
+                  <td>65</td>
+                  <td>Shotgun</td>
+                  <td>One-shot potential</td>
+                </tr>
+                <tr>
+                  <td><strong>Jupiter</strong></td>
+                  <td>DMR</td>
+                  <td>35</td>
+                  <td>Heavy</td>
+                  <td>Long range</td>
+                </tr>
+                <tr>
+                  <td><strong>Bobcat</strong></td>
+                  <td>SMG</td>
+                  <td>14</td>
+                  <td>Light</td>
+                  <td>Mobility builds</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- B-Tier Weapons -->
+        <section class="mb-4" id="b-tier">
+          <div class="section-header">
+            <h2 class="section-title"><span class="tier-badge tier-b">B</span> Budget / Starter</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Weapon</th>
+                  <th>Type</th>
+                  <th>Damage</th>
+                  <th>Ammo</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Rattler</strong></td>
+                  <td>SMG</td>
+                  <td>15</td>
+                  <td>Light</td>
+                  <td>Starter weapon, cheap, reliable</td>
+                </tr>
+                <tr>
+                  <td><strong>Stitcher</strong></td>
+                  <td>Pistol</td>
+                  <td>12</td>
+                  <td>Light</td>
+                  <td>Budget sidearm option</td>
+                </tr>
+                <tr>
+                  <td><strong>Burletta</strong></td>
+                  <td>Pistol</td>
+                  <td>14</td>
+                  <td>Light</td>
+                  <td>Free loadout standard</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- C-Tier Weapons -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title"><span class="tier-badge tier-c">C</span> Situational</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Weapon</th>
+                  <th>Type</th>
+                  <th>Damage</th>
+                  <th>Ammo</th>
+                  <th>Niche Use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Hairpin</strong></td>
+                  <td>SMG (Suppressed)</td>
+                  <td>16</td>
+                  <td>Light</td>
+                  <td>Silent kills, stealth runs</td>
+                </tr>
+                <tr>
+                  <td><strong>Arpeggio</strong></td>
+                  <td>Burst Rifle</td>
+                  <td>3x15</td>
+                  <td>Medium</td>
+                  <td>Requires good aim</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Weapon Modifications -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Weapon Modifications</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <h4 class="mb-1">Barrel Mods</h4>
+              <p class="text-secondary">Suppressors reduce sound but decrease damage. Standard barrels maintain damage output. Choose based on playstyle.</p>
+            </div>
+            <div class="card">
+              <h4 class="mb-1">Sight Mods</h4>
+              <p class="text-secondary">Red dots for close-medium range. Scopes for long range. Iron sights work fine for most encounters.</p>
+            </div>
+            <div class="card">
+              <h4 class="mb-1">Grip Mods</h4>
+              <p class="text-secondary"><strong>Vertical Grip III</strong> is the meta choice. Significantly reduces recoil for better sustained fire accuracy.</p>
+            </div>
+            <div class="card">
+              <h4 class="mb-1">Extended Mags</h4>
+              <p class="text-secondary">More bullets before reload. Essential for PvP fights where reload timing can be fatal.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recommended Loadouts -->
+        <section id="loadouts">
+          <div class="section-header">
+            <h2 class="section-title">Recommended Loadouts</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card loadout-card">
+              <div class="loadout-name">Budget Beast</div>
+              <div class="loadout-gear">
+                <div class="loadout-item">
+                  <span class="item-label">Primary:</span>
+                  <span class="item-value">Ferro</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Secondary:</span>
+                  <span class="item-value">Stitcher</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Shield:</span>
+                  <span class="item-value">Light Shield</span>
+                </div>
+              </div>
+              <p class="loadout-desc">Minimal investment, maximum ARC killing power. Perfect for material farming runs where you don't want to risk expensive gear.</p>
+            </div>
+
+            <div class="card loadout-card">
+              <div class="loadout-name">All-Rounder</div>
+              <div class="loadout-gear">
+                <div class="loadout-item">
+                  <span class="item-label">Primary:</span>
+                  <span class="item-value">Bettina</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Secondary:</span>
+                  <span class="item-value">Anvil</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Shield:</span>
+                  <span class="item-value">Medium Shield</span>
+                </div>
+              </div>
+              <p class="loadout-desc">The meta loadout. Handles everything - ARC, players, close range, long range. The standard Raiders aspire to.</p>
+            </div>
+
+            <div class="card loadout-card">
+              <div class="loadout-name">PvP Hunter</div>
+              <div class="loadout-gear">
+                <div class="loadout-item">
+                  <span class="item-label">Primary:</span>
+                  <span class="item-value">Vulcano</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Secondary:</span>
+                  <span class="item-value">Venator</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Shield:</span>
+                  <span class="item-value">Heavy Shield</span>
+                </div>
+              </div>
+              <p class="loadout-desc">Built to delete other Raiders. Close-range dominance with maximum survivability. Avoid heavy ARC - you're not equipped for them.</p>
+            </div>
+
+            <div class="card loadout-card">
+              <div class="loadout-name">Boss Killer</div>
+              <div class="loadout-gear">
+                <div class="loadout-item">
+                  <span class="item-label">Primary:</span>
+                  <span class="item-value">Hullcracker</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Secondary:</span>
+                  <span class="item-value">Ferro</span>
+                </div>
+                <div class="loadout-item">
+                  <span class="item-label">Augment:</span>
+                  <span class="item-value">Combat Mk.3</span>
+                </div>
+              </div>
+              <p class="loadout-desc">For Queen and Matriarch hunts. Hullcracker for boss damage, Ferro for adds. Bring plenty of Bastion Cells.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

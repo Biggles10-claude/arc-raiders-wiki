@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Tips & Tricks - Essential advice for beginners and advanced players. Hard-earned wisdom from the Rust Belt.">
+  <title>Tips - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">ARC RAIDERS<span>━━ WIKI ━━</span></div>
+      </div>
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title"><span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span></div>
+        </div>
+        <ul class="favorites-list"><li class="favorites-empty">No favorites yet</li></ul>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link"><span class="nav-link-icon">&#x2302;</span> Home</a>
+          <a href="overview.html" class="nav-link"><span class="nav-link-icon">&#x25C8;</span> Overview</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link"><span class="nav-link-icon">&#x25CE;</span> Maps</a>
+          <a href="weapons.html" class="nav-link"><span class="nav-link-icon">&#x2694;</span> Weapons</a>
+          <a href="enemies.html" class="nav-link"><span class="nav-link-icon">&#x2620;</span> Enemies</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link"><span class="nav-link-icon">&#x25C6;</span> Skills</a>
+          <a href="crafting.html" class="nav-link"><span class="nav-link-icon">&#x2699;</span> Crafting</a>
+          <a href="traders.html" class="nav-link"><span class="nav-link-icon">&#x25C7;</span> Traders</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link"><span class="nav-link-icon">&#x2191;</span> Extraction</a>
+          <a href="tips.html" class="nav-link active"><span class="nav-link-icon">&#x2726;</span> Tips</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link"><span class="nav-link-icon">&#x2630;</span> Lore</a>
+        </div>
+      </nav>
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn"><span>&#x2699;</span> Loadout Builder</button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list"><li><span class="text-dim">-</span></li></ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main-content">
+        <section class="page-header">
+          <div class="breadcrumb"><a href="index.html">Home</a> / <span>Tips</span></div>
+          <h1 class="page-title">Essential Tips & Tricks</h1>
+          <p class="page-subtitle">Hard-earned wisdom from the Rust Belt</p>
+        </section>
+
+        <!-- Beginner Tips -->
+        <section class="mb-4" id="beginner">
+          <div class="section-header">
+            <h2 class="section-title">Beginner Tips (First 10 Hours)</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="tips-grid">
+            <div class="card tip-card">
+              <div class="tip-number">1</div>
+              <div class="tip-content">
+                <h4>Use Free Loadouts Aggressively</h4>
+                <p>Zero risk way to learn. Scout maps, find POIs, complete low-risk quests, learn ARC spawns. Then trade the augment to Lance for an upgrade. Repeat until comfortable.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card highlight">
+              <div class="tip-number">2</div>
+              <div class="tip-content">
+                <h4>Recycle Everything (CRITICAL)</h4>
+                <p><strong>Never sell:</strong> Toasters, Desk Fans, Broken Radios, Damaged Electronics</p>
+                <p><strong>Right-Click + Recycle:</strong></p>
+                <ul>
+                  <li>Toaster = Plastic Parts + Wires</li>
+                  <li>Fan = Metal Parts + Wires</li>
+                  <li>Radio = Metal Parts + Electronics</li>
+                </ul>
+                <p><strong>Materials are the REAL currency.</strong></p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">3</div>
+              <div class="tip-content">
+                <h4>Sound is Intelligence</h4>
+                <ul>
+                  <li>Footsteps reveal player positions</li>
+                  <li>Gunfire shows ongoing fights</li>
+                  <li>Car alarms broadcast careless players</li>
+                  <li>ARC have unique audio cues</li>
+                </ul>
+                <p>Use headphones. Enable "3D Audio" in settings.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card highlight">
+              <div class="tip-number">4</div>
+              <div class="tip-content">
+                <h4>Blueprint Priority Protocol</h4>
+                <p>Blueprint found = mission changes.</p>
+                <ol>
+                  <li><strong>STOP EVERYTHING</strong></li>
+                  <li>Open inventory immediately</li>
+                  <li>Place in Safe Pocket</li>
+                  <li>Head to nearest extraction</li>
+                  <li>Ignore other loot, avoid all fights</li>
+                </ol>
+                <p><strong>Permanent unlock > any material</strong></p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">5</div>
+              <div class="tip-content">
+                <h4>Heavy Ammo for ARC</h4>
+                <ul>
+                  <li>Light ammo = pea shooter vs armored ARC</li>
+                  <li>Medium ammo = okay vs ARC</li>
+                  <li><strong>Heavy ammo = ARC killer</strong></li>
+                </ul>
+                <p>Always bring a Ferro or Anvil for Bastions and Rocketeers.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Combat Tips -->
+        <section class="mb-4" id="combat">
+          <div class="section-header">
+            <h2 class="section-title">Combat Tips</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="tips-grid">
+            <div class="card tip-card">
+              <div class="tip-number">6</div>
+              <div class="tip-content">
+                <h4>Melee Finish Downed Players</h4>
+                <ul>
+                  <li>Bullets = 5-10 seconds + loud</li>
+                  <li><strong>Knockout Punch = 1 second + silent</strong></li>
+                </ul>
+                <p>Saves ammo, quieter, faster. Always melee downed enemies.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">7</div>
+              <div class="tip-content">
+                <h4>~100 HP Standard</h4>
+                <p>Most Raiders have roughly 100 HP. Helps with engagement decisions.</p>
+                <p><strong>Example:</strong> Ferro (40 dmg) = 3 shots to kill</p>
+                <p>Factor in shields. Headshots deal bonus damage.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">8</div>
+              <div class="tip-content">
+                <h4>Camera Melee Trick</h4>
+                <p>Security cameras can be destroyed with jump + vertical crowbar swing.</p>
+                <p>Disables without ammo, silent, doesn't alert. Useful for stealth breaching.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">9</div>
+              <div class="tip-content">
+                <h4>Drone Propeller Focus</h4>
+                <p>Wasps/Hornets have exposed propellers. Shoot same-side propeller = immediate crash.</p>
+                <p>Then melee to finish. Black smoke marks crash site. Quick kills = less attention.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">10</div>
+              <div class="tip-content">
+                <h4>Pre-Destroyed ARC Lootable</h4>
+                <p>Dead ARC units ("husks") have loot. Don't overlook "cold" wrecks.</p>
+                <p>Giant spider-type = lootable hatch on top. Climb up, grab loot, jump off FAST (chassis heats up).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Movement & Survival -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Movement & Survival</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="tips-grid">
+            <div class="card tip-card">
+              <div class="tip-number">11</div>
+              <div class="tip-content">
+                <h4>Stamina Management</h4>
+                <p>Everything drains stamina: Sprinting, Jumping, Vaulting, Rolling</p>
+                <p><strong>Slide while running</strong> = passive regen</p>
+                <p>Invest in Mobility skills FIRST. Running out = death sentence.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">12</div>
+              <div class="tip-content">
+                <h4>Plan Your Exit</h4>
+                <p>Before dropping, know extraction points.</p>
+                <p>"I'll extract at X. Backup: if X is closed, go to Y."</p>
+                <p><strong>Full bag = time to leave.</strong> Don't get greedy.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">13</div>
+              <div class="tip-content">
+                <h4>Parkour = Life</h4>
+                <ul>
+                  <li>Vertical movement wins fights</li>
+                  <li>Unexpected angles = advantage</li>
+                  <li>Zipline + Snap Hook = mobility king</li>
+                  <li>High ground = better sightlines</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">14</div>
+              <div class="tip-content">
+                <h4>Car Alarm Hell</h4>
+                <p>Vehicles with lights on = armed. Bump them = <strong>LOUD ALARM</strong></p>
+                <p><strong>Fix:</strong> Smash the attached alarm device FAST</p>
+                <p>Or just avoid lit vehicles entirely.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Looting & Efficiency -->
+        <section class="mb-4" id="looting">
+          <div class="section-header">
+            <h2 class="section-title">Looting & Efficiency</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="tips-grid">
+            <div class="card tip-card">
+              <div class="tip-number">15</div>
+              <div class="tip-content">
+                <h4>Watchlist Feature</h4>
+                <p>Need specific materials?</p>
+                <ol>
+                  <li>Hover over item in crafting</li>
+                  <li>Click eye icon</li>
+                  <li>Materials auto-highlight when looting</li>
+                </ol>
+                <p>Saves time, prevents missing needed items. Essential for quests.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card highlight">
+              <div class="tip-number">16</div>
+              <div class="tip-content">
+                <h4>In-Round Crafting (Skill)</h4>
+                <p><strong>36-point Survival skill - GAME CHANGER</strong></p>
+                <p>Craft during raids: Bandages, Shield Cells, Impact Grenades</p>
+                <p>Extends raid time indefinitely. Solo player essential. Team support amazing.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">17</div>
+              <div class="tip-content">
+                <h4>Flare Reading</h4>
+                <p>Flare on ground = someone died there</p>
+                <p><strong>BUT:</strong> Crafted flares can be decoys</p>
+                <p>Don't blindly charge flares. Could be a trap. Scan area first.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">18</div>
+              <div class="tip-content">
+                <h4>Locked Room = Best Loot</h4>
+                <p>Breachable doors = high-value loot</p>
+                <ul>
+                  <li>Higher blueprint drop rates</li>
+                  <li>Better container rolls</li>
+                  <li>Worth the noise usually</li>
+                </ul>
+                <p>Prioritize security rooms.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Advanced Strategy -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Advanced Strategy</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="tips-grid">
+            <div class="card tip-card">
+              <div class="tip-number">19</div>
+              <div class="tip-content">
+                <h4>Noise Discipline</h4>
+                <ul>
+                  <li>Breaching = loud (use Gentle Pressure skill)</li>
+                  <li>Prolonged fighting = attracts more</li>
+                  <li>Finish fast or move on</li>
+                  <li>Silent kills when possible (melee, suppressed)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">20</div>
+              <div class="tip-content">
+                <h4>Risk vs Reward Always</h4>
+                <ul>
+                  <li>Got good loot? Consider extracting</li>
+                  <li>Empty bag? Push further</li>
+                  <li>Low HP? Play safe</li>
+                  <li>High HP + resources? Be bold</li>
+                </ul>
+                <p><strong>Bank smaller gains > lose everything</strong></p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">21</div>
+              <div class="tip-content">
+                <h4>Team Communication</h4>
+                <p>Proximity chat is powerful.</p>
+                <ul>
+                  <li>"Don't shoot!" often works</li>
+                  <li>Many players are friendly</li>
+                  <li>Temporary alliances common</li>
+                  <li>Take down ARC together</li>
+                </ul>
+                <p>Then extract peacefully... or betray at extraction (your choice).</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">22</div>
+              <div class="tip-content">
+                <h4>Free Loadout Strategies</h4>
+                <ul>
+                  <li><strong>Loot Goblin:</strong> Sneak, avoid fights, fill bag, extract</li>
+                  <li><strong>PvP Hunter:</strong> Find geared player, surprise attack</li>
+                  <li><strong>Scout Mission:</strong> Learn map, find quest locations</li>
+                  <li><strong>Trade Exploit:</strong> Extract, trade augment to Lance, repeat</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Meta Knowledge -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Meta Knowledge</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="tips-grid">
+            <div class="card tip-card">
+              <div class="tip-number">23</div>
+              <div class="tip-content">
+                <h4>Matchmaking</h4>
+                <p>Solo players often matched vs other solos. Not guaranteed, but common. Fair fights more likely.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">24</div>
+              <div class="tip-content">
+                <h4>Extract While Downed</h4>
+                <p>Game lets you extract when downed! Crawl into elevator/metro. Keep everything. Don't give up near extraction.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card highlight">
+              <div class="tip-number">25</div>
+              <div class="tip-content">
+                <h4>Scrappy is Essential</h4>
+                <p>Pet rooster collects materials passively. Even while offline. Upgrade FIRST - compounds over time. Free materials = huge advantage.</p>
+              </div>
+            </div>
+
+            <div class="card tip-card">
+              <div class="tip-number">26</div>
+              <div class="tip-content">
+                <h4>Night Raids = Better Loot</h4>
+                <p>Map condition with darkness + limited extractions. Higher risk but better loot drop rates. Blueprint chance increased. Worth it if confident.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Do's and Don'ts -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Common Mistakes</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card dont-card">
+              <h4 class="text-danger">DON'T:</h4>
+              <ul>
+                <li>Sell junk items (recycle instead)</li>
+                <li>Fight every ARC you see</li>
+                <li>Run in open areas</li>
+                <li>Ignore extraction timers</li>
+                <li>Forget Safe Pockets</li>
+                <li>Use Free Loadout for quests</li>
+                <li>Fight Bastion head-on</li>
+                <li>Stand still at extraction</li>
+                <li>Ignore audio cues</li>
+                <li>Get greedy with full bag</li>
+              </ul>
+            </div>
+
+            <div class="card do-card">
+              <h4 class="text-safe">DO:</h4>
+              <ul>
+                <li>Recycle everything</li>
+                <li>Pick fights wisely</li>
+                <li>Move tactically with cover</li>
+                <li>Plan extractions early</li>
+                <li>Use Safe Pockets correctly</li>
+                <li>Invest in Mobility skills first</li>
+                <li>Flank heavy ARC</li>
+                <li>Stay mobile at extraction</li>
+                <li>Listen carefully</li>
+                <li>Extract when ahead</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Enemy Database - Complete guide to all ARC threats. Weak points, behaviors, and counter-strategies.">
+  <title>Enemies - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          ARC RAIDERS
+          <span>━━ WIKI ━━</span>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+
+      <!-- Favorites -->
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title">
+            <span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span>
+          </div>
+        </div>
+        <ul class="favorites-list">
+          <li class="favorites-empty">No favorites yet</li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">&#x2302;</span> Home
+          </a>
+          <a href="overview.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C8;</span> Overview
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link">
+            <span class="nav-link-icon">&#x25CE;</span> Maps
+          </a>
+          <a href="weapons.html" class="nav-link">
+            <span class="nav-link-icon">&#x2694;</span> Weapons
+          </a>
+          <a href="enemies.html" class="nav-link active">
+            <span class="nav-link-icon">&#x2620;</span> Enemies
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C6;</span> Skills
+          </a>
+          <a href="crafting.html" class="nav-link">
+            <span class="nav-link-icon">&#x2699;</span> Crafting
+          </a>
+          <a href="traders.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C7;</span> Traders
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link">
+            <span class="nav-link-icon">&#x2191;</span> Extraction
+          </a>
+          <a href="tips.html" class="nav-link">
+            <span class="nav-link-icon">&#x2726;</span> Tips
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link">
+            <span class="nav-link-icon">&#x2630;</span> Lore
+          </a>
+        </div>
+      </nav>
+
+      <!-- Tools -->
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn">
+          <span>&#x2699;</span> Loadout Builder
+        </button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list">
+            <li><span class="text-dim">-</span></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Enemies</span>
+          </div>
+          <h1 class="page-title">ARC Enemy Database</h1>
+          <p class="page-subtitle">Know your threats. Learn their weaknesses.</p>
+        </section>
+
+        <!-- Scanner Behavior Guide -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Scanner Behavior</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-3">
+            <div class="card scanner-card">
+              <div class="scanner-indicator">
+                <span class="scanner-dot safe"></span>
+              </div>
+              <div class="scanner-status">BLUE - Patrolling</div>
+              <p class="text-secondary">Neutral state. Safe to observe. ARC hasn't detected you yet.</p>
+            </div>
+            <div class="card scanner-card">
+              <div class="scanner-indicator">
+                <span class="scanner-dot caution"></span>
+              </div>
+              <div class="scanner-status">YELLOW - Alerted</div>
+              <p class="text-secondary">Heard noise or spotted at distance. Investigating. Move slowly or hide.</p>
+            </div>
+            <div class="card scanner-card">
+              <div class="scanner-indicator">
+                <span class="scanner-dot danger"></span>
+              </div>
+              <div class="scanner-status">RED - Attacking</div>
+              <p class="text-secondary">Locked on and engaging. Fight or flee - stealth is no longer an option.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Low Threat -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="threat-indicator"><span class="threat-dot safe"></span></span>
+              Low Threat
+            </h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="enemy-grid">
+            <!-- Tick -->
+            <div class="card enemy-card" id="tick">
+              <div class="enemy-header">
+                <div class="enemy-name">Tick</div>
+                <div class="enemy-type">Ground Ambusher</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Very Low</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">XP</span>
+                    <span class="stat-value">25</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Hides on walls and ceilings. Leaps at your face when you get close.</p>
+                  <p><strong>Weak Point:</strong> Entire body - very fragile</p>
+                  <p><strong>Drops:</strong> Minor loot, ARC Alloy</p>
+                  <p><strong>Audio Cue:</strong> Scuttling sound</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Melee one-shot with Fly Swatter skill. Without it, any weapon works - just don't let them grab you.
+                </div>
+              </div>
+            </div>
+
+            <!-- Pop -->
+            <div class="card enemy-card" id="pop">
+              <div class="enemy-header">
+                <div class="enemy-name">Pop</div>
+                <div class="enemy-type">Rolling Bomb</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Very Low</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Threat</span>
+                    <span class="stat-value">Explosive</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Rolls toward players, detonates on contact or when shot.</p>
+                  <p><strong>Weak Point:</strong> Glowing core (center)</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Shoot before it reaches you. DO NOT rush - will explode in your face.
+                </div>
+              </div>
+            </div>
+
+            <!-- Snitch -->
+            <div class="card enemy-card" id="snitch">
+              <div class="enemy-header">
+                <div class="enemy-name">Snitch</div>
+                <div class="enemy-type">Scout Drone</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Low</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Priority</span>
+                    <span class="stat-value text-danger">KILL FAST</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Flies high, scans area. If alerted, calls reinforcements (Wasps, Hornets).</p>
+                  <p><strong>Weak Point:</strong> 3 wiper blades (destroy all to kill)</p>
+                  <p><strong>Drops:</strong> Snitch Scanner</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Kill IMMEDIATELY to prevent alarm. Destroy all 3 blades quickly before it calls backup.
+                </div>
+              </div>
+            </div>
+
+            <!-- Wasp -->
+            <div class="card enemy-card" id="wasp">
+              <div class="enemy-header">
+                <div class="enemy-name">Wasp</div>
+                <div class="enemy-type">Flying Drone</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Low</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Attack</span>
+                    <span class="stat-value">Machine Gun</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Aerial machine gun fire. Relatively easy to hit.</p>
+                  <p><strong>Weak Point:</strong> Thrusters (all sides exposed)</p>
+                  <p><strong>Drops:</strong> Wasp Driver, ARC Alloy</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Target propellers for quick kills. Shoot same-side propeller to make it crash, then melee finish.
+                </div>
+              </div>
+            </div>
+
+            <!-- Fireball -->
+            <div class="card enemy-card" id="fireball">
+              <div class="enemy-header">
+                <div class="enemy-name">Fireball</div>
+                <div class="enemy-type">Flamethrower Unit</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Low</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Attack</span>
+                    <span class="stat-value">Flame Stream</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Patrols in groups. Stops, flames area, then rolls to next spot.</p>
+                  <p><strong>Weak Point:</strong> Entire body</p>
+                  <p><strong>Drops:</strong> Fireball Burner</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Shoot while rolling (before flame attack). Avoid the flame cone.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Medium Threat -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="threat-indicator"><span class="threat-dot caution"></span></span>
+              Medium Threat
+            </h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="enemy-grid">
+            <!-- Hornet -->
+            <div class="card enemy-card" id="hornet">
+              <div class="enemy-header">
+                <div class="enemy-name">Hornet</div>
+                <div class="enemy-type">Combat Drone</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Medium</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">XP</span>
+                    <span class="stat-value">150</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Faster than Wasp. Stun attacks that leave you vulnerable.</p>
+                  <p><strong>Weak Point:</strong> Rear thrusters (back only - harder to hit)</p>
+                  <p><strong>Drops:</strong> Hornet Driver, ARC Alloy</p>
+                  <p class="text-danger"><strong>Danger:</strong> Stun attack leaves you vulnerable to other enemies!</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Circle strafe to hit rear thrusters. Don't let it stun you in crowded areas.
+                </div>
+              </div>
+            </div>
+
+            <!-- Turret -->
+            <div class="card enemy-card" id="turret">
+              <div class="enemy-header">
+                <div class="enemy-name">Turret</div>
+                <div class="enemy-type">Stationary Defense</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Medium</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Mobility</span>
+                    <span class="stat-value">None</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Wall-mounted. Calibrates slowly, then fires. Stationary target.</p>
+                  <p><strong>Weak Point:</strong> Base/core</p>
+                  <p><strong>Time Window:</strong> Slow to aim - exploit this!</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Jump + melee from above. Or shoot the base while it calibrates.
+                </div>
+              </div>
+            </div>
+
+            <!-- Bison -->
+            <div class="card enemy-card" id="bison">
+              <div class="enemy-header">
+                <div class="enemy-name">Bison</div>
+                <div class="enemy-type">Quadruped</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Medium-High</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Speed</span>
+                    <span class="stat-value">Fast</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Jump attacks, wave blasts. Faster than Bastion but less armored.</p>
+                  <p><strong>Weak Point:</strong> Legs/joints</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Keep distance, target legs. Use cover to break its charge path.
+                </div>
+              </div>
+            </div>
+
+            <!-- Leaper -->
+            <div class="card enemy-card" id="leaper">
+              <div class="enemy-header">
+                <div class="enemy-name">Leaper</div>
+                <div class="enemy-type">Ambush Unit</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Medium</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Attack</span>
+                    <span class="stat-value">Pounce</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Pounces from distance. Can close gaps quickly.</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Set mines on predictable jump paths. Grenades work well. Anticipate the leap.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- High Threat -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="threat-indicator"><span class="threat-dot danger"></span></span>
+              High Threat
+            </h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="enemy-grid">
+            <!-- Rocketeer -->
+            <div class="card enemy-card enemy-high" id="rocketeer">
+              <div class="enemy-header">
+                <div class="enemy-name">Rocketeer</div>
+                <div class="enemy-type">Aerial Artillery</div>
+                <div class="enemy-warning">&#x26A0; #1 PLAYER KILLER</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">High</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Attack</span>
+                    <span class="stat-value text-danger">Guided Rockets</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Guided rockets with AoE damage. Stays at range.</p>
+                  <p><strong>Weak Point:</strong> Thrusters, glowing core underneath</p>
+                  <p><strong>Drops:</strong> Rocketeer Driver, Heavy Gun Parts</p>
+                  <p><strong>Audio Cue:</strong> Lock-on warning sound - MOVE when you hear it!</p>
+                </div>
+                <div class="enemy-danger">
+                  <strong>CRITICAL:</strong> NEVER fight in open areas. Rockets have splash damage. One volley can end your raid.
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> ALWAYS fight from indoor cover. 1 Wolfpack Grenade = quick kill. Heavy ammo mandatory.
+                </div>
+              </div>
+            </div>
+
+            <!-- Bastion -->
+            <div class="card enemy-card enemy-high" id="bastion">
+              <div class="enemy-header">
+                <div class="enemy-name">Bastion</div>
+                <div class="enemy-type">Heavy Walker</div>
+                <div class="enemy-warning">&#x26A0; NEVER FRONT ASSAULT</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Very High</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">XP</span>
+                    <span class="stat-value text-safe">Massive</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Slow crab-like walker with devastating minigun.</p>
+                  <p><strong>Weak Points:</strong> Yellow kneecaps FIRST, then rear yellow cylinder</p>
+                  <p><strong>Drops:</strong> Bastion Parts, Bastion Cells (Hullcracker ammo)</p>
+                </div>
+                <div class="enemy-danger">
+                  <strong>CRITICAL:</strong> Frontal minigun melts shields and HP. Flanking is MANDATORY.
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> One player draws aggro, others flank and shoot kneecaps. Use Ferro for armor penetration.
+                </div>
+              </div>
+            </div>
+
+            <!-- Bombardier -->
+            <div class="card enemy-card enemy-high" id="bombardier">
+              <div class="enemy-header">
+                <div class="enemy-name">Bombardier</div>
+                <div class="enemy-type">Artillery Walker</div>
+                <div class="enemy-warning">&#x26A0; KILL SPOTTERS FIRST</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">Very High</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Attack</span>
+                    <span class="stat-value text-danger">Heat-Seeking Mortars</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Mortar strikes guided by Spotter drones (yellow laser).</p>
+                  <p><strong>Weak Points:</strong> Same as Bastion - knees, then rear cylinder</p>
+                </div>
+                <div class="enemy-danger">
+                  <strong>CRITICAL:</strong> Mortars track through air. Fight only from buildings with SOLID ROOFS.
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Kill Spotters first (removes tracking). Use Bastion tactics for the walker itself.
+                </div>
+              </div>
+            </div>
+
+            <!-- Shredder -->
+            <div class="card enemy-card enemy-high" id="shredder">
+              <div class="enemy-header">
+                <div class="enemy-name">Shredder</div>
+                <div class="enemy-type">Close Combat Specialist</div>
+                <span class="new-badge">NEW</span>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">HP</span>
+                    <span class="stat-value">High</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Location</span>
+                    <span class="stat-value">Stella Montis ONLY</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Rapid shotgun-like barrage at close range.</p>
+                </div>
+                <div class="enemy-danger">
+                  <strong>CRITICAL:</strong> Shreds shields and HP instantly if you're close. Don't round corners blindly.
+                </div>
+                <div class="enemy-counter">
+                  <strong>Counter:</strong> Maintain distance, use cover. Stella Montis corridors are dangerous - check corners.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Boss Tier -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="threat-indicator"><span class="threat-dot boss"></span></span>
+              Boss Tier
+            </h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="enemy-grid">
+            <!-- Queen -->
+            <div class="card enemy-card enemy-boss" id="queen">
+              <div class="enemy-header">
+                <div class="enemy-name">The Queen</div>
+                <div class="enemy-type">Harvester Guardian</div>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">Size</span>
+                    <span class="stat-value text-danger">GIGANTIC</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Requires</span>
+                    <span class="stat-value">Multiple Squads</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Behavior:</strong> Mortar fire + devastating laser beam. Appears during Harvester events.</p>
+                  <p><strong>Weak Point:</strong> Large core (after breaking outer armor)</p>
+                  <p><strong>Drops:</strong> Advanced Power Cells, Legendary components</p>
+                </div>
+                <div class="enemy-counter">
+                  <strong>Strategy:</strong> Team coordination essential. Hullcracker mandatory. Alternatively, ignore Queen and loot Harvester vaults instead - easier loot.
+                </div>
+              </div>
+            </div>
+
+            <!-- Matriarch -->
+            <div class="card enemy-card enemy-boss" id="matriarch">
+              <div class="enemy-header">
+                <div class="enemy-name">Matriarch</div>
+                <div class="enemy-type">Advanced Combat Unit</div>
+                <span class="new-badge">NEW</span>
+              </div>
+              <div class="enemy-body">
+                <div class="enemy-stats">
+                  <div class="enemy-stat">
+                    <span class="stat-label">Location</span>
+                    <span class="stat-value">Stella Montis</span>
+                  </div>
+                  <div class="enemy-stat">
+                    <span class="stat-label">Difficulty</span>
+                    <span class="stat-value text-danger">EXTREME</span>
+                  </div>
+                </div>
+                <div class="enemy-details">
+                  <p><strong>Tagline:</strong> "Makes the Queen look friendly"</p>
+                  <p><strong>Behavior:</strong> Flashbangs, gas mines, summons Bastions and Rocketeers as backup.</p>
+                  <p><strong>Weak Point:</strong> Face - but ONLY when blue shield is DOWN</p>
+                </div>
+                <div class="enemy-danger">
+                  <strong>CRITICAL:</strong> Blue shield = invulnerable. Wait for shield drop, then unload everything.
+                </div>
+                <div class="enemy-counter">
+                  <strong>Requirements:</strong> Hullcracker + Wolfpack Grenades + coordinated team. Solo attempts are suicide.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lootable ARC -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Lootable ARC (Non-Hostile)</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <p class="mb-2">Not all ARC will attack you. These units can be looted without a fight:</p>
+            <ul class="loot-list">
+              <li><strong>ARC Courier</strong> - Passive unit carrying materials</li>
+              <li><strong>ARC Probe</strong> - Non-combat scanner, lootable components</li>
+              <li><strong>ARC Husks</strong> - Dead/destroyed units. Giant spider-types have a lootable hatch on top (climb up, grab loot, jump off FAST - chassis heats up after opening)</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

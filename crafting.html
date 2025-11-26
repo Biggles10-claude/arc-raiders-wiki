@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Crafting Guide - Workshop stations, blueprints, material farming, and upgrade priorities.">
+  <title>Crafting - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          ARC RAIDERS
+          <span>━━ WIKI ━━</span>
+        </div>
+      </div>
+
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title">
+            <span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span>
+          </div>
+        </div>
+        <ul class="favorites-list">
+          <li class="favorites-empty">No favorites yet</li>
+        </ul>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link"><span class="nav-link-icon">&#x2302;</span> Home</a>
+          <a href="overview.html" class="nav-link"><span class="nav-link-icon">&#x25C8;</span> Overview</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link"><span class="nav-link-icon">&#x25CE;</span> Maps</a>
+          <a href="weapons.html" class="nav-link"><span class="nav-link-icon">&#x2694;</span> Weapons</a>
+          <a href="enemies.html" class="nav-link"><span class="nav-link-icon">&#x2620;</span> Enemies</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link"><span class="nav-link-icon">&#x25C6;</span> Skills</a>
+          <a href="crafting.html" class="nav-link active"><span class="nav-link-icon">&#x2699;</span> Crafting</a>
+          <a href="traders.html" class="nav-link"><span class="nav-link-icon">&#x25C7;</span> Traders</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link"><span class="nav-link-icon">&#x2191;</span> Extraction</a>
+          <a href="tips.html" class="nav-link"><span class="nav-link-icon">&#x2726;</span> Tips</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link"><span class="nav-link-icon">&#x2630;</span> Lore</a>
+        </div>
+      </nav>
+
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn"><span>&#x2699;</span> Loadout Builder</button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list"><li><span class="text-dim">-</span></li></ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Crafting</span>
+          </div>
+          <h1 class="page-title">Workshop & Crafting System</h1>
+          <p class="page-subtitle">8 stations. 3 tiers each. Permanent progression.</p>
+        </section>
+
+        <!-- Golden Rule -->
+        <section class="mb-4">
+          <div class="card card-highlight golden-rule">
+            <div class="rule-icon">&#x267B;</div>
+            <div class="rule-content">
+              <h3>THE GOLDEN RULE</h3>
+              <p class="rule-main">RECYCLE EVERYTHING - Materials &gt; Money</p>
+              <p class="rule-detail">Never sell: Toasters, Fans, Radios, Broken Electronics</p>
+              <p class="rule-detail">Recycle for: Metal Parts, Plastic Parts, Wires, Rubber Parts</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Workshop Stations -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Workshop Stations</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="station-grid">
+            <!-- Gunsmith -->
+            <div class="card station-card" id="gunsmith">
+              <div class="station-header">
+                <div class="station-icon">&#x1F52B;</div>
+                <div class="station-info">
+                  <div class="station-name">Gunsmith</div>
+                  <span class="station-priority high">HIGH PRIORITY</span>
+                </div>
+              </div>
+              <div class="station-body">
+                <p><strong>Crafts:</strong> Weapons, Weapon Mods, Advanced Ammo</p>
+                <div class="tier-breakdown">
+                  <div class="tier"><strong>Tier 1:</strong> Basic weapons (Rattler, Stitcher, Burletta)</div>
+                  <div class="tier"><strong>Tier 2:</strong> Mid-tier weapons (Osprey, Tempest, basic mods)</div>
+                  <div class="tier"><strong>Tier 3:</strong> Legendary weapons (Ferro, Jupiter), advanced mod kits</div>
+                </div>
+                <p class="station-materials"><strong>Materials:</strong> Metal Parts, Gun Parts, Mechanical Components</p>
+                <p class="station-strategy"><strong>Strategy:</strong> RUSH TO TIER 2 for competitive weapons</p>
+              </div>
+            </div>
+
+            <!-- Gear Bench -->
+            <div class="card station-card" id="gear-bench">
+              <div class="station-header">
+                <div class="station-icon">&#x1F6E1;</div>
+                <div class="station-info">
+                  <div class="station-name">Gear Bench</div>
+                  <span class="station-priority high">HIGH PRIORITY</span>
+                </div>
+              </div>
+              <div class="station-body">
+                <p><strong>Crafts:</strong> Shields, Augments, Armor</p>
+                <div class="tier-breakdown">
+                  <div class="tier"><strong>Shields:</strong> Light (Tier 1), Medium (Tier 2), Heavy (Tier 3)</div>
+                  <div class="tier"><strong>Augments:</strong> Combat Mk.1-3, Looting Mk.1-3, Tactical Mk.1-3</div>
+                </div>
+                <p class="station-strategy"><strong>Strategy:</strong> Looting Mk.2 is essential for material farming runs</p>
+              </div>
+            </div>
+
+            <!-- Medical Lab -->
+            <div class="card station-card" id="medical-lab">
+              <div class="station-header">
+                <div class="station-icon">&#x2695;</div>
+                <div class="station-info">
+                  <div class="station-name">Medical Lab</div>
+                  <span class="station-priority medium">MEDIUM PRIORITY</span>
+                </div>
+              </div>
+              <div class="station-body">
+                <p><strong>Crafts:</strong> Healing items, Shield Rechargers</p>
+                <div class="tier-breakdown">
+                  <div class="tier"><strong>Tier 1:</strong> Bandages, Basic Shield Rechargers</div>
+                  <div class="tier"><strong>Tier 2:</strong> Medkits, Shield Rechargers, Detox Sprays</div>
+                  <div class="tier"><strong>Tier 3:</strong> Adrenaline Shots, Advanced Medkits</div>
+                </div>
+                <p class="station-materials"><strong>Materials:</strong> Chemicals, Plastics, Medical Supplies</p>
+                <p class="station-strategy"><strong>Strategy:</strong> Craft in batches (20+ bandages, 10 rechargers)</p>
+              </div>
+            </div>
+
+            <!-- Explosives Station -->
+            <div class="card station-card" id="explosives">
+              <div class="station-header">
+                <div class="station-icon">&#x1F4A3;</div>
+                <div class="station-info">
+                  <div class="station-name">Explosives Station</div>
+                  <span class="station-priority medium">MEDIUM PRIORITY</span>
+                </div>
+              </div>
+              <div class="station-body">
+                <p><strong>Crafts:</strong> Grenades, Mines, Explosives</p>
+                <div class="tier-breakdown">
+                  <div class="tier"><strong>Tier 1:</strong> Light Impact Grenades</div>
+                  <div class="tier"><strong>Tier 2:</strong> Gas Grenades, Blaze Grenades</div>
+                  <div class="tier"><strong>Tier 3:</strong> C4, Mines, Advanced explosives</div>
+                </div>
+                <p class="station-materials"><strong>Materials:</strong> Chemicals, Wasp Drivers, Rocketeer Drivers</p>
+                <p class="station-strategy"><strong>Best For:</strong> ARC crowd control</p>
+              </div>
+            </div>
+
+            <!-- Utility Station -->
+            <div class="card station-card">
+              <div class="station-header">
+                <div class="station-icon">&#x1F527;</div>
+                <div class="station-info">
+                  <div class="station-name">Utility Station</div>
+                  <span class="station-priority medium">MEDIUM PRIORITY</span>
+                </div>
+              </div>
+              <div class="station-body">
+                <p><strong>Crafts:</strong> Gadgets, Movement Tools</p>
+                <div class="tier-breakdown">
+                  <div class="tier"><strong>Tier 1:</strong> Zipline, Basic gadgets</div>
+                  <div class="tier"><strong>Tier 2:</strong> Snap Hook (personal grapple), Tagging Grenades</div>
+                  <div class="tier"><strong>Tier 3:</strong> Photoelectric Cloak (stealth invisibility)</div>
+                </div>
+                <p class="station-materials"><strong>Materials:</strong> Snitch Scanners, Electronics, Fabric</p>
+                <p class="station-strategy"><strong>Essential:</strong> Zipline for verticality and escape</p>
+              </div>
+            </div>
+
+            <!-- Refiner -->
+            <div class="card station-card">
+              <div class="station-header">
+                <div class="station-icon">&#x2697;</div>
+                <div class="station-info">
+                  <div class="station-name">Refiner</div>
+                  <span class="station-priority low">LOWER PRIORITY</span>
+                </div>
+              </div>
+              <div class="station-body">
+                <p><strong>Function:</strong> Convert materials into higher-tier components</p>
+                <p><strong>Example:</strong> 5 Metal Parts = 1 Mechanical Component</p>
+                <p class="station-strategy"><strong>Strategy:</strong> Upgrade mid-game to save inventory space and farming time</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Scrappy -->
+        <section class="mb-4" id="scrappy">
+          <div class="section-header">
+            <h2 class="section-title">&#x1F413; Scrappy (Your Pet Rooster)</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card card-highlight">
+            <div class="scrappy-content">
+              <p><strong>Function:</strong> Passively collects materials while you're offline</p>
+              <p><strong>Brings:</strong> Metal Parts, Fabric, Plastic Parts, Chemicals, Rubber, Seeds</p>
+              <p><strong>Upgrade:</strong> Feed special items found in raids to improve collection rate</p>
+              <p class="text-safe"><strong>Strategy: UPGRADE FIRST!</strong> Passive income compounds over time. Best early investment.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Blueprint System -->
+        <section class="mb-4" id="blueprints">
+          <div class="section-header">
+            <h2 class="section-title">Blueprint System</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card mb-3">
+            <h4>What are Blueprints?</h4>
+            <ul>
+              <li>Permanent crafting recipe unlocks</li>
+              <li>Found in containers, locked rooms, quests, boss drops</li>
+              <li>Rarity: Common to Legendary</li>
+              <li>Account-Wide: Never lose once learned</li>
+            </ul>
+          </div>
+
+          <div class="card mb-3">
+            <h4>How to Use Blueprints</h4>
+            <ol class="numbered-list">
+              <li>Find blueprint in raid</li>
+              <li><strong>Put in SAFE POCKET immediately</strong></li>
+              <li>Extract successfully</li>
+              <li>Use in inventory to learn</li>
+              <li>Unlocked forever at appropriate workbench</li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <h4>Best Blueprint Farming Locations</h4>
+            <div class="card-grid card-grid-3">
+              <div class="farm-location">
+                <div class="location-name">Spaceport</div>
+                <ul>
+                  <li>Container Storage (high-risk)</li>
+                  <li>Launch Towers event</li>
+                  <li>Security rooms</li>
+                </ul>
+              </div>
+              <div class="farm-location">
+                <div class="location-name">Stella Montis</div>
+                <ul>
+                  <li>Medical Research (most Epic)</li>
+                  <li>Security Checkpoint</li>
+                  <li>Breach rooms (east Lobby)</li>
+                </ul>
+              </div>
+              <div class="farm-location">
+                <div class="location-name">Buried City</div>
+                <ul>
+                  <li>Hospital (medical blueprints)</li>
+                  <li>Town Hall</li>
+                  <li>Pharmacy rooms</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Material Farming Guide -->
+        <section class="mb-4" id="materials">
+          <div class="section-header">
+            <h2 class="section-title">Material Farming Guide</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>Best Maps</th>
+                  <th>Hot Spots</th>
+                  <th>Used For</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Metal Parts</strong></td>
+                  <td>All maps</td>
+                  <td>Everywhere (recycle junk)</td>
+                  <td>Everything</td>
+                </tr>
+                <tr>
+                  <td><strong>Mechanical Components</strong></td>
+                  <td>All</td>
+                  <td>Refiner (5 Metal = 1 Mech)</td>
+                  <td>Weapon upgrades</td>
+                </tr>
+                <tr>
+                  <td><strong>Arc Circuitry</strong></td>
+                  <td>Spaceport, Dam</td>
+                  <td>Electrical areas</td>
+                  <td>Workshop upgrades</td>
+                </tr>
+                <tr>
+                  <td><strong>Batteries</strong></td>
+                  <td>Dam</td>
+                  <td>Electrical Substations</td>
+                  <td>Crafting, upgrades</td>
+                </tr>
+                <tr>
+                  <td><strong>Fabric</strong></td>
+                  <td>Buried City</td>
+                  <td>Residential, shops</td>
+                  <td>Armor, augments</td>
+                </tr>
+                <tr>
+                  <td><strong>Cat Beds</strong></td>
+                  <td>Buried City</td>
+                  <td>Plaza Rosa, shops</td>
+                  <td>Scrappy upgrades</td>
+                </tr>
+                <tr>
+                  <td><strong>Chemicals</strong></td>
+                  <td>All</td>
+                  <td>Medical areas</td>
+                  <td>Explosives, medical</td>
+                </tr>
+                <tr>
+                  <td><strong>Wasp Drivers</strong></td>
+                  <td>Any map</td>
+                  <td>Kill Wasps</td>
+                  <td>Explosives</td>
+                </tr>
+                <tr>
+                  <td><strong>Rocketeer Drivers</strong></td>
+                  <td>Any map</td>
+                  <td>Kill Rocketeers</td>
+                  <td>Tier 3 Explosives</td>
+                </tr>
+                <tr>
+                  <td><strong>Bastion Cells</strong></td>
+                  <td>Any map</td>
+                  <td>Kill Bastions</td>
+                  <td>Hullcracker ammo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Upgrade Priority -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Upgrade Priority Guide</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-3">
+            <div class="card priority-card">
+              <div class="priority-phase">Early Game</div>
+              <div class="priority-levels">Levels 1-20</div>
+              <ol class="priority-list">
+                <li>Scrappy (passive income)</li>
+                <li>Gunsmith Tier 2 (better weapons)</li>
+                <li>Gear Bench Tier 2 (Medium Shield + Looting Mk.2)</li>
+              </ol>
+            </div>
+
+            <div class="card priority-card">
+              <div class="priority-phase">Mid Game</div>
+              <div class="priority-levels">Levels 20-40</div>
+              <ol class="priority-list">
+                <li>Medical Lab Tier 2 (sustainability)</li>
+                <li>Explosives Tier 2 (ARC control)</li>
+                <li>Gunsmith Tier 3 (endgame weapons)</li>
+              </ol>
+            </div>
+
+            <div class="card priority-card">
+              <div class="priority-phase">Late Game</div>
+              <div class="priority-levels">Level 40+</div>
+              <ol class="priority-list">
+                <li>All stations to Tier 3</li>
+                <li>Focus on blueprint collection</li>
+                <li>Stockpile expensive craft materials</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

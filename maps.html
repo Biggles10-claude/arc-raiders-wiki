@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Maps Guide - All 5 Rust Belt locations with POIs, extraction points, and loot zones.">
+  <title>Maps - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          ARC RAIDERS
+          <span>━━ WIKI ━━</span>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+
+      <!-- Favorites -->
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title">
+            <span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span>
+          </div>
+        </div>
+        <ul class="favorites-list">
+          <li class="favorites-empty">No favorites yet</li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-icon">&#x2302;</span> Home
+          </a>
+          <a href="overview.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C8;</span> Overview
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link active">
+            <span class="nav-link-icon">&#x25CE;</span> Maps
+          </a>
+          <a href="weapons.html" class="nav-link">
+            <span class="nav-link-icon">&#x2694;</span> Weapons
+          </a>
+          <a href="enemies.html" class="nav-link">
+            <span class="nav-link-icon">&#x2620;</span> Enemies
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C6;</span> Skills
+          </a>
+          <a href="crafting.html" class="nav-link">
+            <span class="nav-link-icon">&#x2699;</span> Crafting
+          </a>
+          <a href="traders.html" class="nav-link">
+            <span class="nav-link-icon">&#x25C7;</span> Traders
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link">
+            <span class="nav-link-icon">&#x2191;</span> Extraction
+          </a>
+          <a href="tips.html" class="nav-link">
+            <span class="nav-link-icon">&#x2726;</span> Tips
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link">
+            <span class="nav-link-icon">&#x2630;</span> Lore
+          </a>
+        </div>
+      </nav>
+
+      <!-- Tools -->
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn">
+          <span>&#x2699;</span> Loadout Builder
+        </button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list">
+            <li><span class="text-dim">-</span></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Maps</span>
+          </div>
+          <h1 class="page-title">Maps & Locations</h1>
+          <p class="page-subtitle">Five distinct battlegrounds across the Rust Belt</p>
+        </section>
+
+        <!-- Map Cards -->
+        <section class="mb-4">
+          <!-- Dam Battlegrounds -->
+          <div class="card map-card mb-3" id="dam-battlegrounds">
+            <div class="map-header">
+              <div class="map-title-section">
+                <h2 class="map-name">Dam Battlegrounds</h2>
+                <div class="map-subtitle">Alcantara Power Plant</div>
+              </div>
+              <div class="map-difficulty">
+                <span class="difficulty-label">Difficulty</span>
+                <div class="difficulty-stars">
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star">&#x2606;</span>
+                  <span class="star">&#x2606;</span>
+                  <span class="star">&#x2606;</span>
+                  <span class="star">&#x2606;</span>
+                </div>
+                <span class="difficulty-text">Beginner</span>
+              </div>
+            </div>
+
+            <div class="map-body">
+              <div class="map-image-placeholder">
+                <span>Map Image</span>
+                <small>Dam Battlegrounds overview coming soon</small>
+              </div>
+
+              <div class="map-details">
+                <div class="map-description">
+                  <p>Dense forests and swamps surrounding a massive power plant. The most forgiving map for new Raiders with plenty of cover and escape routes.</p>
+                </div>
+
+                <div class="map-info-grid">
+                  <div class="map-info-item">
+                    <div class="info-label">Best For</div>
+                    <div class="info-value">Learning basics, Metal Parts, Batteries, Arc Circuitry</div>
+                  </div>
+                  <div class="map-info-item">
+                    <div class="info-label">Extraction Points</div>
+                    <div class="info-value">3 Elevators</div>
+                  </div>
+                </div>
+
+                <div class="map-pois">
+                  <h4>Key POIs</h4>
+                  <ul class="poi-list">
+                    <li><span class="poi-icon">&#x26A1;</span> Electrical Substations - Battery farming</li>
+                    <li><span class="poi-icon">&#x1F33F;</span> Hydroponic Dome Complex</li>
+                    <li><span class="poi-icon">&#x2699;</span> Power Generation Complex</li>
+                    <li><span class="poi-icon">&#x1F4A7;</span> Water Treatment</li>
+                    <li><span class="poi-icon">&#x1F52C;</span> Testing Annex</li>
+                  </ul>
+                </div>
+
+                <div class="map-tips">
+                  <h4>Pro Tips</h4>
+                  <ul>
+                    <li>Great cover everywhere - use the forest to your advantage</li>
+                    <li>Low-value loot but safe for learning</li>
+                    <li>Avoid open water areas - limited escape routes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Buried City -->
+          <div class="card map-card mb-3" id="buried-city">
+            <div class="map-header">
+              <div class="map-title-section">
+                <h2 class="map-name">Buried City</h2>
+                <div class="map-subtitle">Ancient Sand-Covered Ruins</div>
+              </div>
+              <div class="map-difficulty">
+                <span class="difficulty-label">Difficulty</span>
+                <div class="difficulty-stars">
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star">&#x2606;</span>
+                  <span class="star">&#x2606;</span>
+                </div>
+                <span class="difficulty-text">Intermediate</span>
+              </div>
+            </div>
+
+            <div class="map-body">
+              <div class="map-image-placeholder">
+                <span>Map Image</span>
+                <small>Buried City overview coming soon</small>
+              </div>
+
+              <div class="map-details">
+                <div class="map-description">
+                  <p>An ancient city half-buried in sand dunes. Narrow streets create dangerous choke points but also plenty of loot opportunities in abandoned shops and homes.</p>
+                </div>
+
+                <div class="map-info-grid">
+                  <div class="map-info-item">
+                    <div class="info-label">Best For</div>
+                    <div class="info-value">Fabric, Cat Beds, mid-tier loot</div>
+                  </div>
+                  <div class="map-info-item">
+                    <div class="info-label">Extraction Points</div>
+                    <div class="info-value">3 Metro Stations (underground)</div>
+                  </div>
+                </div>
+
+                <div class="map-pois">
+                  <h4>Key POIs</h4>
+                  <ul class="poi-list">
+                    <li><span class="poi-icon">&#x1F3E5;</span> Hospital - High-value medical loot</li>
+                    <li><span class="poi-icon">&#x1F3DB;</span> Town Hall</li>
+                    <li><span class="poi-icon">&#x1F339;</span> Plaza Rosa - Cat Beds spawn</li>
+                    <li><span class="poi-icon">&#x1F3E0;</span> Santa Maria Houses</li>
+                    <li><span class="poi-icon">&#x1F6CD;</span> Galleria - Shop shelves</li>
+                  </ul>
+                </div>
+
+                <div class="map-tips">
+                  <h4>Pro Tips</h4>
+                  <ul>
+                    <li>Narrow streets = ambush danger. Check corners!</li>
+                    <li>Shop shelves have great loot - don't overlook them</li>
+                    <li>Metro extraction takes extra time - plan accordingly</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spaceport -->
+          <div class="card map-card mb-3" id="spaceport">
+            <div class="map-header">
+              <div class="map-title-section">
+                <h2 class="map-name">Spaceport</h2>
+                <div class="map-subtitle">Acerra Exodus Facility</div>
+              </div>
+              <div class="map-difficulty">
+                <span class="difficulty-label">Difficulty</span>
+                <div class="difficulty-stars">
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star">&#x2606;</span>
+                  <span class="star">&#x2606;</span>
+                </div>
+                <span class="difficulty-text">Intermediate</span>
+              </div>
+            </div>
+
+            <div class="map-body">
+              <div class="map-image-placeholder">
+                <span>Map Image</span>
+                <small>Spaceport overview coming soon</small>
+              </div>
+
+              <div class="map-details">
+                <div class="map-description">
+                  <p>The abandoned Acerra Spaceport where Exodus shuttles once launched. Industrial zones with long sightlines - bring a ranged weapon.</p>
+                </div>
+
+                <div class="map-info-grid">
+                  <div class="map-info-item">
+                    <div class="info-label">Best For</div>
+                    <div class="info-value">ARC Circuitry, Tech Parts, Electronics</div>
+                  </div>
+                  <div class="map-info-item">
+                    <div class="info-label">Extraction Points</div>
+                    <div class="info-value">4 Elevators</div>
+                  </div>
+                </div>
+
+                <div class="map-pois">
+                  <h4>Key POIs</h4>
+                  <ul class="poi-list">
+                    <li><span class="poi-icon text-danger">&#x26A0;</span> Container Storage - DANGEROUS PvP hotspot!</li>
+                    <li><span class="poi-icon">&#x1F680;</span> Launch Towers</li>
+                    <li><span class="poi-icon">&#x1F6EB;</span> Departure Building</li>
+                    <li><span class="poi-icon">&#x1F6EC;</span> Arrival Building</li>
+                    <li><span class="poi-icon">&#x1F4E1;</span> Control Tower A6</li>
+                    <li><span class="poi-icon">&#x26FD;</span> Fuel Lines</li>
+                  </ul>
+                </div>
+
+                <div class="map-tips">
+                  <h4>Pro Tips</h4>
+                  <ul>
+                    <li>Long sightlines favor ranged weapons - bring a DMR or Bettina</li>
+                    <li>Container Storage is the richest but most contested area</li>
+                    <li>Industrial areas = less cover, more danger</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blue Gate -->
+          <div class="card map-card mb-3" id="blue-gate">
+            <div class="map-header">
+              <div class="map-title-section">
+                <h2 class="map-name">The Blue Gate</h2>
+                <div class="map-subtitle">Mountain Pass & Tunnels</div>
+              </div>
+              <div class="map-difficulty">
+                <span class="difficulty-label">Difficulty</span>
+                <div class="difficulty-stars">
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star">&#x2606;</span>
+                </div>
+                <span class="difficulty-text">Advanced</span>
+              </div>
+            </div>
+
+            <div class="map-body">
+              <div class="map-image-placeholder">
+                <span>Map Image</span>
+                <small>Blue Gate overview coming soon</small>
+              </div>
+
+              <div class="map-details">
+                <div class="map-description">
+                  <p>A treacherous mountain pass with an extensive underground tunnel network. Requires puzzle-solving and preparation - bring Barricade Kits and Jolt Mines.</p>
+                </div>
+
+                <div class="map-info-grid">
+                  <div class="map-info-item">
+                    <div class="info-label">Best For</div>
+                    <div class="info-value">High-tier loot, puzzle rewards</div>
+                  </div>
+                  <div class="map-info-item">
+                    <div class="info-label">Extraction Points</div>
+                    <div class="info-value">Elevators + Raider Hatches</div>
+                  </div>
+                </div>
+
+                <div class="map-pois">
+                  <h4>Key POIs</h4>
+                  <ul class="poi-list">
+                    <li><span class="poi-icon">&#x26F0;</span> Pilgrim's Peak</li>
+                    <li><span class="poi-icon">&#x1F6A7;</span> Checkpoint - Bastion spawn!</li>
+                    <li><span class="poi-icon">&#x1F332;</span> Trapper's Glade</li>
+                    <li><span class="poi-icon">&#x1F573;</span> Underground tunnel network</li>
+                  </ul>
+                </div>
+
+                <div class="map-tips">
+                  <h4>Pro Tips</h4>
+                  <ul>
+                    <li>Puzzle rooms require specific items - come prepared</li>
+                    <li>Hatches more common here - save your keys for emergencies</li>
+                    <li>Underground tunnels have excellent loot but limited escape routes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stella Montis -->
+          <div class="card map-card mb-3" id="stella-montis">
+            <div class="map-header">
+              <div class="map-title-section">
+                <h2 class="map-name">Stella Montis</h2>
+                <div class="map-subtitle">Underground Research Facility</div>
+                <span class="new-badge">NEW</span>
+              </div>
+              <div class="map-difficulty">
+                <span class="difficulty-label">Difficulty</span>
+                <div class="difficulty-stars">
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                  <span class="star filled">&#x2605;</span>
+                </div>
+                <span class="difficulty-text">Expert</span>
+              </div>
+            </div>
+
+            <div class="map-body">
+              <div class="map-image-placeholder">
+                <span>Map Image</span>
+                <small>Stella Montis overview coming soon</small>
+              </div>
+
+              <div class="map-details">
+                <div class="map-description">
+                  <p>A massive 2-floor underground facility hidden in the northern mountains. The most dangerous map with the best loot. Home to Shredder and Matriarch.</p>
+                </div>
+
+                <div class="map-info-grid">
+                  <div class="map-info-item">
+                    <div class="info-label">Best For</div>
+                    <div class="info-value">Epic loot, exclusive drops, new enemies</div>
+                  </div>
+                  <div class="map-info-item">
+                    <div class="info-label">Extraction Points</div>
+                    <div class="info-value">1 Airshaft, 2 Metro Stations</div>
+                  </div>
+                </div>
+
+                <div class="map-pois">
+                  <h4>Key POIs</h4>
+                  <ul class="poi-list">
+                    <li><span class="poi-icon text-danger">&#x26A0;</span> Medical Research - INTENSE PvP hotspot!</li>
+                    <li><span class="poi-icon">&#x1F331;</span> Seed Vault</li>
+                    <li><span class="poi-icon">&#x2699;</span> Assembly Workshops</li>
+                    <li><span class="poi-icon">&#x1F3E2;</span> Lobby - Long-range combat area</li>
+                    <li><span class="poi-icon">&#x1F4E6;</span> Sandbox A & B</li>
+                    <li><span class="poi-icon">&#x1F69A;</span> Loading Bay - Bastion patrol</li>
+                  </ul>
+                </div>
+
+                <div class="map-enemies">
+                  <h4>Unique Enemies</h4>
+                  <div class="enemy-tags">
+                    <span class="enemy-tag danger">Shredder</span>
+                    <span class="enemy-tag boss">Matriarch</span>
+                    <span class="enemy-tag">Multiple Bastions</span>
+                  </div>
+                </div>
+
+                <div class="map-tips">
+                  <h4>Pro Tips</h4>
+                  <ul>
+                    <li>Close-quarters combat - bring shotguns (Vulcano ideal)</li>
+                    <li>Dark corridors hide Shredders - check every corner</li>
+                    <li>Airshaft extraction is unique - learn the route</li>
+                    <li>Medical Research has best loot but highest PvP concentration</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Map Conditions -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Map Conditions</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Effect</th>
+                  <th>Loot Quality</th>
+                  <th>Recommended For</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Standard</strong></td>
+                  <td>Normal ARC patrols</td>
+                  <td>Normal</td>
+                  <td>Learning, consistent runs</td>
+                </tr>
+                <tr>
+                  <td><strong>Night Raid</strong></td>
+                  <td>Darkness, limited extractions</td>
+                  <td class="text-safe">Increased</td>
+                  <td>Confident Raiders, stealth builds</td>
+                </tr>
+                <tr>
+                  <td><strong>Harvester</strong></td>
+                  <td>Queen boss appears</td>
+                  <td class="text-caution">High (vaults)</td>
+                  <td>Teams, boss hunters</td>
+                </tr>
+                <tr>
+                  <td><strong>Snowfall</strong></td>
+                  <td>Reduced visibility</td>
+                  <td>Normal</td>
+                  <td>PvP avoidance, ambush builds</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Loot Tier Legend -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Loot Zone Guide</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-3">
+            <div class="card loot-zone-card safe">
+              <div class="loot-zone-indicator"></div>
+              <div class="loot-zone-name">Green Zones</div>
+              <p class="text-secondary">Low-tier loot. Safe areas with common materials. Good for beginners.</p>
+            </div>
+            <div class="card loot-zone-card caution">
+              <div class="loot-zone-indicator"></div>
+              <div class="loot-zone-name">Yellow Zones</div>
+              <p class="text-secondary">Medium-tier loot. Better rewards with moderate ARC presence.</p>
+            </div>
+            <div class="card loot-zone-card danger">
+              <div class="loot-zone-indicator"></div>
+              <div class="loot-zone-name">Red Zones</div>
+              <p class="text-secondary">High-tier loot. Best rewards but heavy ARC and PvP concentration.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

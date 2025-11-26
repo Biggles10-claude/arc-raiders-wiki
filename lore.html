@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Lore - The story of humanity's last stand. Timeline, mysteries, and the world of Speranza.">
+  <title>Lore - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">ARC RAIDERS<span>━━ WIKI ━━</span></div>
+      </div>
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title"><span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span></div>
+        </div>
+        <ul class="favorites-list"><li class="favorites-empty">No favorites yet</li></ul>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link"><span class="nav-link-icon">&#x2302;</span> Home</a>
+          <a href="overview.html" class="nav-link"><span class="nav-link-icon">&#x25C8;</span> Overview</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link"><span class="nav-link-icon">&#x25CE;</span> Maps</a>
+          <a href="weapons.html" class="nav-link"><span class="nav-link-icon">&#x2694;</span> Weapons</a>
+          <a href="enemies.html" class="nav-link"><span class="nav-link-icon">&#x2620;</span> Enemies</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link"><span class="nav-link-icon">&#x25C6;</span> Skills</a>
+          <a href="crafting.html" class="nav-link"><span class="nav-link-icon">&#x2699;</span> Crafting</a>
+          <a href="traders.html" class="nav-link"><span class="nav-link-icon">&#x25C7;</span> Traders</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link"><span class="nav-link-icon">&#x2191;</span> Extraction</a>
+          <a href="tips.html" class="nav-link"><span class="nav-link-icon">&#x2726;</span> Tips</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link active"><span class="nav-link-icon">&#x2630;</span> Lore</a>
+        </div>
+      </nav>
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn"><span>&#x2699;</span> Loadout Builder</button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list"><li><span class="text-dim">-</span></li></ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main-content">
+        <section class="page-header">
+          <div class="breadcrumb"><a href="index.html">Home</a> / <span>Lore</span></div>
+          <h1 class="page-title">The Lore of ARC Raiders</h1>
+          <p class="page-subtitle">The story of humanity's last stand</p>
+        </section>
+
+        <!-- Timeline -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Timeline of Catastrophe</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-event">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content card">
+                <h3 class="timeline-title">The First Wave: Climate Collapse</h3>
+                <p>Earth ravaged by climate catastrophe. Civilization teeters on the brink. Desperate attempts at salvation lead to the construction of Exodus shuttles at Spaceport Acerra. Hope for space colonies emerges.</p>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="timeline-marker danger"></div>
+              <div class="timeline-content card">
+                <h3 class="timeline-title">The Second Wave: ARC Arrival</h3>
+                <p>Mysterious machines appear from the sky. Unknown origin, unknown purpose. Designated "ARC" (Artificial Robotic Construct). Systematic destruction of humanity begins. The surface becomes the "Rust Belt." Humanity is driven underground.</p>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="timeline-marker safe"></div>
+              <div class="timeline-content card">
+                <h3 class="timeline-title">The Underground Era</h3>
+                <p>Survivors build Speranza in post-apocalyptic Italy, beneath the District of Toledo. Leaders emerge: Celeste, Shani, and others. A society of "Raiders" forms - risk-takers who venture topside for supplies.</p>
+              </div>
+            </div>
+
+            <div class="timeline-event">
+              <div class="timeline-marker current"></div>
+              <div class="timeline-content card">
+                <h3 class="timeline-title">Present Day</h3>
+                <p>Raids for resources are essential for survival. The ARC threat is ever-present. Factions hold different visions for the future. The mystery of ARC's origin remains unsolved. Evacuation plans are being prepared. The fight continues...</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- The ARC Mystery -->
+        <section class="mb-4" id="arc-mystery">
+          <div class="section-header">
+            <h2 class="section-title">The ARC Mystery</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <h4>What We Know</h4>
+              <ul>
+                <li>Mechanical entities of immense power</li>
+                <li>Variety of units (ground, air, boss-class)</li>
+                <li>Seem to "rain from the sky"</li>
+                <li>Methodical, intelligent behavior</li>
+                <li>Origins completely unknown</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>What We Don't Know</h4>
+              <ul>
+                <li>Who created them?</li>
+                <li>Why did they appear?</li>
+                <li>What is their purpose?</li>
+                <li>Can they be stopped?</li>
+                <li>Is there a controller?</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card mt-3">
+            <h4>Theories (In-Universe)</h4>
+            <div class="theory-list">
+              <div class="theory">
+                <div class="theory-name">Failed AI Uprising</div>
+                <p>Humanity's own creation turned against its makers</p>
+              </div>
+              <div class="theory">
+                <div class="theory-name">Extraterrestrial Force</div>
+                <p>Invaders from beyond Earth</p>
+              </div>
+              <div class="theory">
+                <div class="theory-name">Military Experiment</div>
+                <p>Weapons program gone catastrophically wrong</p>
+              </div>
+              <div class="theory">
+                <div class="theory-name">Earth's Defense</div>
+                <p>The planet fighting back against humanity</p>
+              </div>
+              <div class="theory">
+                <div class="theory-name">Time Paradox</div>
+                <p>Machines from a different timeline</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Speranza -->
+        <section class="mb-4" id="speranza-lore">
+          <div class="section-header">
+            <h2 class="section-title">Speranza: The Last City</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card mb-3">
+            <h4>Location</h4>
+            <p>Deep underground beneath Italy's ruins, in the District of Toledo. Multiple neighborhoods have formed, with a growing population of survivors.</p>
+          </div>
+
+          <div class="card mb-3">
+            <h4>Society Structure</h4>
+            <div class="society-roles">
+              <div class="role">
+                <div class="role-name">Celeste</div>
+                <div class="role-desc">Leader and founder</div>
+              </div>
+              <div class="role">
+                <div class="role-name">Raiders</div>
+                <div class="role-desc">Scavengers (player characters)</div>
+              </div>
+              <div class="role">
+                <div class="role-name">Traders</div>
+                <div class="role-desc">Resource managers</div>
+              </div>
+              <div class="role">
+                <div class="role-name">Citizens</div>
+                <div class="role-desc">Regular survivors</div>
+              </div>
+              <div class="role">
+                <div class="role-name">Security</div>
+                <div class="role-desc">Shani's forces</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <h4>Culture</h4>
+            <ul>
+              <li><strong>NASA-Punk aesthetic:</strong> Cowboy dusters meet astronaut helmets</li>
+              <li><strong>Philosophy:</strong> Function over fashion, boldness and bravado</li>
+              <li><strong>Economy:</strong> Maker culture centered on workshops</li>
+              <li><strong>Community:</strong> Tight-knit despite the danger</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4>Key Locations in Speranza</h4>
+            <ul>
+              <li><strong>Workshop District:</strong> Your personal den</li>
+              <li><strong>Trading Hub:</strong> Where merchants gather</li>
+              <li><strong>Security Command:</strong> Shani's domain</li>
+              <li><strong>Library:</strong> Maintained by Apollo</li>
+              <li><strong>Recreation areas:</strong> Where Raiders unwind</li>
+              <li><strong>Living quarters:</strong> Home for survivors</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Trader Backstories -->
+        <section class="mb-4" id="traders-lore">
+          <div class="section-header">
+            <h2 class="section-title">The Traders' Agendas</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="lore-cards">
+            <div class="card lore-card">
+              <div class="lore-header">
+                <div class="lore-icon">&#x1F451;</div>
+                <h4>Celeste</h4>
+              </div>
+              <div class="lore-body">
+                <p><strong>Vision:</strong> Preserve humanity</p>
+                <p><strong>Goal:</strong> Prepare for evacuation</p>
+                <p><strong>Method:</strong> Strengthen Speranza</p>
+                <p><strong>Secret:</strong> Planning an exodus route</p>
+              </div>
+            </div>
+
+            <div class="card lore-card">
+              <div class="lore-header">
+                <div class="lore-icon">&#x1F52B;</div>
+                <h4>Tian Wen</h4>
+              </div>
+              <div class="lore-body">
+                <p><strong>Vision:</strong> Unknown (reclusive)</p>
+                <p><strong>Goal:</strong> Perfect weapon craft</p>
+                <p><strong>Method:</strong> Isolation, focus</p>
+                <p><strong>Secret:</strong> Soft spot for repairs</p>
+              </div>
+            </div>
+
+            <div class="card lore-card">
+              <div class="lore-header">
+                <div class="lore-icon">&#x1F4A3;</div>
+                <h4>Apollo</h4>
+              </div>
+              <div class="lore-body">
+                <p><strong>Vision:</strong> A better tomorrow</p>
+                <p><strong>Goal:</strong> Build community bonds</p>
+                <p><strong>Method:</strong> Kids' football, library</p>
+                <p><strong>Secret:</strong> Mysterious past - "not his first rodeo"</p>
+              </div>
+            </div>
+
+            <div class="card lore-card">
+              <div class="lore-header">
+                <div class="lore-icon">&#x1F916;</div>
+                <h4>Lance</h4>
+              </div>
+              <div class="lore-body">
+                <p><strong>Vision:</strong> Fit in with humans</p>
+                <p><strong>Goal:</strong> Recover lost memories</p>
+                <p><strong>Method:</strong> Over-participation in everything</p>
+                <p><strong>Secret:</strong> Amnesia hiding something important</p>
+              </div>
+            </div>
+
+            <div class="card lore-card">
+              <div class="lore-header">
+                <div class="lore-icon">&#x1F6E1;</div>
+                <h4>Shani</h4>
+              </div>
+              <div class="lore-body">
+                <p><strong>Vision:</strong> Total security</p>
+                <p><strong>Goal:</strong> Understand ARC threat</p>
+                <p><strong>Method:</strong> Paranoid preparation</p>
+                <p><strong>Secret:</strong> Knows more than she says</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mt-3">
+            <h4>Tensions in Speranza</h4>
+            <ul>
+              <li>Different visions for the future</li>
+              <li>Resource allocation conflicts</li>
+              <li>Risk tolerance disagreements</li>
+              <li>Some want to fight, others want to flee</li>
+              <li>Political undercurrents beneath the cooperation</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- The Rust Belt -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">The Rust Belt</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card mb-3">
+            <p>The surface world. Post-post-apocalyptic Italy, overgrown and reclaimed by nature. Deadly beautiful.</p>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <h4>Regions</h4>
+              <ul>
+                <li><strong>Dam Battlegrounds:</strong> Power Plant ruins</li>
+                <li><strong>Buried City:</strong> Ancient urban ruins</li>
+                <li><strong>Spaceport:</strong> Exodus shuttle facility</li>
+                <li><strong>Blue Gate:</strong> Mountain pass</li>
+                <li><strong>Stella Montis:</strong> Research facility</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>Aesthetic</h4>
+              <ul>
+                <li><strong>NASA-Punk:</strong> Retro-futuristic decay</li>
+                <li>70s space age meets western frontier</li>
+                <li>Nature reclaiming technology</li>
+                <li>Hope amid desolation</li>
+                <li>Colorful despite the danger</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Raiders -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Raiders: Your Role</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card mb-3">
+            <h4>What is a Raider?</h4>
+            <ul>
+              <li>Volunteer from Speranza</li>
+              <li>Ventures "Topside" to the Rust Belt</li>
+              <li>Scavenges for the community</li>
+              <li>High risk, high reward lifestyle</li>
+              <li>Respected for bravery</li>
+            </ul>
+          </div>
+
+          <div class="card mb-3">
+            <h4>Raider Culture</h4>
+            <ul>
+              <li>"Boldness and bravado"</li>
+              <li>Individualistic but communal</li>
+              <li>Competitive yet cooperative</li>
+              <li>Stories shared in bars</li>
+              <li>Legends emerge from the Rust Belt</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4>The Choice</h4>
+            <p>Every raid presents moral decisions:</p>
+            <ul>
+              <li>Fight other Raiders... or cooperate?</li>
+              <li>Kill... or spare?</li>
+              <li>Hoard... or share?</li>
+              <li>Your story to write.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Mysteries -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Mysteries to Uncover</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card mystery-card">
+              <h4>The Exodus</h4>
+              <ul>
+                <li>What happened to the shuttles?</li>
+                <li>Did anyone escape Earth?</li>
+                <li>Why is Spaceport abandoned?</li>
+              </ul>
+            </div>
+
+            <div class="card mystery-card">
+              <h4>ARC Origin</h4>
+              <ul>
+                <li>Where did they come from?</li>
+                <li>Quest chains explore this</li>
+                <li>Truth may be shocking</li>
+              </ul>
+            </div>
+
+            <div class="card mystery-card">
+              <h4>Lance's Memory</h4>
+              <ul>
+                <li>Who was he before?</li>
+                <li>Why amnesia?</li>
+                <li>What will he remember?</li>
+              </ul>
+            </div>
+
+            <div class="card mystery-card">
+              <h4>Apollo's Past</h4>
+              <ul>
+                <li>Why so cryptic?</li>
+                <li>"Not his first rodeo"</li>
+                <li>Where was he before Speranza?</li>
+              </ul>
+            </div>
+
+            <div class="card mystery-card">
+              <h4>Stella Montis</h4>
+              <ul>
+                <li>What was researched there?</li>
+                <li>Why so well-preserved?</li>
+                <li>Connection to ARC?</li>
+              </ul>
+            </div>
+
+            <div class="card mystery-card">
+              <h4>The Matriarch</h4>
+              <ul>
+                <li>New, advanced ARC type</li>
+                <li>More intelligent?</li>
+                <li>Evolution... or design?</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Themes -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">The Game's Message</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card mb-3">
+            <h4>Themes</h4>
+            <ul>
+              <li><strong>Hope in hopelessness:</strong> Finding light in the dark</li>
+              <li><strong>Community in isolation:</strong> Building bonds underground</li>
+              <li><strong>Choice in chaos:</strong> Every decision matters</li>
+              <li><strong>Humanity vs machines:</strong> The eternal struggle</li>
+              <li><strong>Cooperation vs competition:</strong> Trust no one... or everyone?</li>
+            </ul>
+          </div>
+
+          <div class="card card-highlight">
+            <h4>Philosophy</h4>
+            <p class="philosophy-quote">"What kind of Raider are you?"</p>
+            <p>Moral choices matter. Emergent storytelling unfolds through your actions. Your legacy in Speranza is shaped by the decisions you make in the Rust Belt. The future you build is yours to define.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>

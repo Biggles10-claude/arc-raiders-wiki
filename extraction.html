@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arc Raiders Extraction Guide - Methods, tactics, and survival strategies to get out alive with your loot.">
+  <title>Extraction - ARC Raiders Wiki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">ARC RAIDERS<span>━━ WIKI ━━</span></div>
+      </div>
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">&#x1F50D;</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title"><span>&#x2605;</span> FAVORITES <span class="favorites-count">0</span></div>
+        </div>
+        <ul class="favorites-list"><li class="favorites-empty">No favorites yet</li></ul>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link"><span class="nav-link-icon">&#x2302;</span> Home</a>
+          <a href="overview.html" class="nav-link"><span class="nav-link-icon">&#x25C8;</span> Overview</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link"><span class="nav-link-icon">&#x25CE;</span> Maps</a>
+          <a href="weapons.html" class="nav-link"><span class="nav-link-icon">&#x2694;</span> Weapons</a>
+          <a href="enemies.html" class="nav-link"><span class="nav-link-icon">&#x2620;</span> Enemies</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link"><span class="nav-link-icon">&#x25C6;</span> Skills</a>
+          <a href="crafting.html" class="nav-link"><span class="nav-link-icon">&#x2699;</span> Crafting</a>
+          <a href="traders.html" class="nav-link"><span class="nav-link-icon">&#x25C7;</span> Traders</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link active"><span class="nav-link-icon">&#x2191;</span> Extraction</a>
+          <a href="tips.html" class="nav-link"><span class="nav-link-icon">&#x2726;</span> Tips</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link"><span class="nav-link-icon">&#x2630;</span> Lore</a>
+        </div>
+      </nav>
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn"><span>&#x2699;</span> Loadout Builder</button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list"><li><span class="text-dim">-</span></li></ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main-content">
+        <section class="page-header">
+          <div class="breadcrumb"><a href="index.html">Home</a> / <span>Extraction</span></div>
+          <h1 class="page-title">Extraction Guide</h1>
+          <p class="page-subtitle">Get out alive. Keep your loot. Survive.</p>
+        </section>
+
+        <!-- Core Truth -->
+        <section class="mb-4">
+          <div class="card card-highlight core-truth">
+            <div class="truth-icon">&#x26A0;</div>
+            <div class="truth-content">
+              <p class="truth-main">Everything you collect is WORTHLESS until you extract.</p>
+              <p class="truth-sub">Dead Raiders extract nothing.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Extraction Methods -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Extraction Methods</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <!-- Elevator -->
+          <div class="card extraction-method mb-3" id="elevator">
+            <div class="method-header">
+              <div class="method-icon">&#x1F6D7;</div>
+              <div class="method-info">
+                <h3 class="method-name">Elevator / Metro Station</h3>
+                <span class="method-type">Standard Extraction</span>
+              </div>
+            </div>
+            <div class="method-body">
+              <div class="method-steps">
+                <h4>How It Works</h4>
+                <ol class="numbered-list">
+                  <li>Locate extraction point (marked on map)</li>
+                  <li>Approach and activate console</li>
+                  <li><strong class="text-danger">LOUD ALARM BROADCASTS YOUR POSITION</strong></li>
+                  <li>Wait for elevator/train arrival</li>
+                  <li>Enter when it arrives</li>
+                  <li>90-second auto-departure timer</li>
+                  <li>Optional: Pull lever for immediate departure</li>
+                </ol>
+              </div>
+
+              <div class="pros-cons">
+                <div class="pros">
+                  <h4 class="text-safe">Pros</h4>
+                  <ul>
+                    <li>Multiple per map (usually 3-4)</li>
+                    <li>No special key required</li>
+                    <li>Free to use</li>
+                    <li>Can extract while downed (crawl in!)</li>
+                    <li>Always available until timer expires</li>
+                  </ul>
+                </div>
+                <div class="cons">
+                  <h4 class="text-danger">Cons</h4>
+                  <ul>
+                    <li><strong>LOUD ALARM</strong> attracts everyone</li>
+                    <li>Popular camping/ambush spots</li>
+                    <li>90-second wait = vulnerability</li>
+                    <li>Other Raiders can follow you in</li>
+                    <li>Timers close points permanently</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="method-locations">
+                <h4>Locations by Map</h4>
+                <ul>
+                  <li><strong>Dam Battlegrounds:</strong> 3 elevators</li>
+                  <li><strong>Buried City:</strong> 3 Metro Stations (underground travel)</li>
+                  <li><strong>Spaceport:</strong> 4 elevators</li>
+                  <li><strong>Blue Gate:</strong> 2 elevators + hatches</li>
+                  <li><strong>Stella Montis:</strong> 2 Metro Stations + 1 Airshaft</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Raider Hatch -->
+          <div class="card extraction-method mb-3" id="hatch">
+            <div class="method-header">
+              <div class="method-icon">&#x1F510;</div>
+              <div class="method-info">
+                <h3 class="method-name">Raider Hatch</h3>
+                <span class="method-type">Silent Extraction</span>
+              </div>
+            </div>
+            <div class="method-body">
+              <div class="method-steps">
+                <h4>How It Works</h4>
+                <ol class="numbered-list">
+                  <li>Find Raider Hatch location (marked on map)</li>
+                  <li>Approach with Hatch Key in inventory</li>
+                  <li><strong class="text-safe">SILENT - No alarm!</strong></li>
+                  <li>Use key to unlock</li>
+                  <li>Enter and extract immediately</li>
+                </ol>
+              </div>
+
+              <div class="pros-cons">
+                <div class="pros">
+                  <h4 class="text-safe">Pros</h4>
+                  <ul>
+                    <li><strong>COMPLETELY SILENT</strong></li>
+                    <li>Instant extraction (no wait)</li>
+                    <li>Rarely camped</li>
+                    <li>Perfect for high-value runs</li>
+                  </ul>
+                </div>
+                <div class="cons">
+                  <h4 class="text-danger">Cons</h4>
+                  <ul>
+                    <li>Requires Hatch Key (limited)</li>
+                    <li>Fewer locations</li>
+                    <li>Key is one-time use</li>
+                    <li>Must plan ahead</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="method-obtain">
+                <h4>How to Get Hatch Keys</h4>
+                <ul>
+                  <li>Buy from Shani (1 per day, resets daily)</li>
+                  <li>Craft at Workshop (requires materials + blueprint)</li>
+                  <li>Find rarely during raids</li>
+                </ul>
+              </div>
+
+              <div class="method-when">
+                <h4>Best Time to Use</h4>
+                <ul>
+                  <li>Found a legendary blueprint</li>
+                  <li>Full bag of epic materials</li>
+                  <li>Low HP, being hunted</li>
+                  <li>Time running out, far from elevators</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safe Pocket -->
+          <div class="card extraction-method mb-3" id="safe-pocket">
+            <div class="method-header">
+              <div class="method-icon">&#x1F4BC;</div>
+              <div class="method-info">
+                <h3 class="method-name">Safe Pocket</h3>
+                <span class="method-type">Insurance System</span>
+              </div>
+            </div>
+            <div class="method-body">
+              <div class="method-description">
+                <p>Special inventory slots (bottom of inventory). Items placed here are <strong class="text-safe">KEPT even if you die</strong>.</p>
+              </div>
+
+              <div class="pocket-slots">
+                <h4>Slot Counts</h4>
+                <ul>
+                  <li><strong>Default:</strong> 3 slots</li>
+                  <li><strong>With Augment:</strong> 2 slots (trade-off for bigger backpack)</li>
+                  <li><strong>Free Loadout:</strong> <span class="text-danger">0 SLOTS (NOTHING protected!)</span></li>
+                </ul>
+              </div>
+
+              <div class="pocket-priority">
+                <h4>What to Put in Safe Pocket</h4>
+                <ol class="numbered-list">
+                  <li><strong>BLUEPRINTS</strong> (always #1 priority)</li>
+                  <li>Epic/Legendary materials</li>
+                  <li>Rare components (Rocketeer Drivers, Bastion Cells)</li>
+                  <li>Quest items (if not confident)</li>
+                  <li>Expensive crafting materials</li>
+                </ol>
+              </div>
+
+              <div class="pocket-warning">
+                <h4 class="text-danger">Free Loadout Warning</h4>
+                <p>Free Loadouts have <strong>ZERO Safe Pockets</strong>. You lose EVERYTHING if you die. Only use for:</p>
+                <ul>
+                  <li>Learning maps (nothing to lose)</li>
+                  <li>Quick material runs (okay to risk)</li>
+                  <li><strong>NOT for quest items or blueprints</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Combat Tactics -->
+        <section class="mb-4" id="tactics">
+          <div class="section-header">
+            <h2 class="section-title">Extraction Combat Tactics</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <h4>Before Calling Extraction</h4>
+              <ul>
+                <li>Scout the area for other Raiders</li>
+                <li>Clear nearby buildings/cover spots</li>
+                <li>Look for ARC patrols (especially Snitches)</li>
+                <li>Identify escape routes if ambushed</li>
+                <li>Sweet spot: 5-10 minutes remaining</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>During the 90-Second Wait</h4>
+              <ul>
+                <li>Constantly scan 360 degrees</li>
+                <li>Don't stay stationary (sniper target)</li>
+                <li>Keep moving between cover spots</li>
+                <li>Watch entry points for ambushers</li>
+                <li>Gadgets ready (smoke, flash, traps)</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>If Attacked</h4>
+              <ul>
+                <li><strong>Option 1:</strong> Fight and defend (if confident)</li>
+                <li><strong>Option 2:</strong> Use gadgets (smoke, flash)</li>
+                <li><strong>Option 3:</strong> Pull lever for early departure</li>
+                <li><strong>Option 4:</strong> Abandon, use backup extraction</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4>ARC Threats at Extraction</h4>
+              <ul>
+                <li><strong>Snitches:</strong> Kill IMMEDIATELY</li>
+                <li><strong>Wasps/Hornets:</strong> Target propellers</li>
+                <li><strong>Leapers:</strong> Set mines before calling</li>
+                <li><strong>Ticks:</strong> Check walls/ceilings</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Advanced Tactics -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Advanced Extraction Plays</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card">
+            <div class="accordion active">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                The Decoy Play
+              </div>
+              <div class="accordion-content">
+                <ol>
+                  <li>Call one extraction (alarm goes off)</li>
+                  <li>Don't actually wait there</li>
+                  <li>Sneak to different extraction</li>
+                  <li>Raiders converge on first alarm</li>
+                  <li>You extract quietly elsewhere</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                The Downed Extraction
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li>If downed near extraction, <strong>CRAWL IN</strong></li>
+                  <li>Elevator/Metro still works while downed</li>
+                  <li>Team can revive you inside</li>
+                  <li>You keep everything!</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                The Hatch Reserve
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li>Save Hatch Key for emergencies</li>
+                  <li>If main extraction is camped, use hatch</li>
+                  <li>Always know hatch locations before raiding</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <div class="accordion-header" tabindex="0">
+                <span class="accordion-icon">&#x25B6;</span>
+                The Over-Encumbered Strategy
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li>If too heavy (slowed movement)</li>
+                  <li>Drop lowest-value items as you move</li>
+                  <li>Speed > 1-2 extra items</li>
+                  <li>Getting there alive matters most</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Extraction Checklist -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Pre-Extraction Checklist</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card checklist-card">
+            <ul class="checklist">
+              <li><span class="check">&#x2610;</span> Check Safe Pocket (blueprints secure?)</li>
+              <li><span class="check">&#x2610;</span> Verify extraction timer (enough time?)</li>
+              <li><span class="check">&#x2610;</span> Scout area (clear of threats?)</li>
+              <li><span class="check">&#x2610;</span> Backup extraction known?</li>
+              <li><span class="check">&#x2610;</span> Gadgets ready (smoke, flashes, mines?)</li>
+              <li><span class="check">&#x2610;</span> HP and shields topped off?</li>
+              <li><span class="check">&#x2610;</span> Weapon reloaded?</li>
+              <li><span class="check">&#x2610;</span> Team coordinated?</li>
+              <li><span class="check">&#x2610;</span> Worth the risk? (or extract now?)</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- When to Extract -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">When to Extract</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <h4 class="text-safe">Extract NOW If:</h4>
+              <ul>
+                <li>Found a blueprint</li>
+                <li>Bag full of good loot</li>
+                <li>Low HP/shields with no meds</li>
+                <li>Heavy PvP in your area</li>
+                <li>Timer running out</li>
+                <li>Completed quest objectives</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4 class="text-caution">Stay Longer If:</h4>
+              <ul>
+                <li>Bag mostly empty</li>
+                <li>Near high-value loot location</li>
+                <li>Plenty of time and resources</li>
+                <li>Comfortable with current risk</li>
+                <li>Specific quest objective nearby</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card-highlight mt-3">
+            <div class="golden-rule-small">
+              <strong>The Golden Rule:</strong> "A full bag means it's time to leave, regardless of time remaining."
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">&#x2191;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>
