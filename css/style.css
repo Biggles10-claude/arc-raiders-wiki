@@ -1643,3 +1643,251 @@ td {
     min-width: 80px;
   }
 }
+
+/* ============================================================
+   INTERACTIVE MAPS
+   Canvas-based map visualization with layers
+   ============================================================ */
+
+.interactive-map-container {
+  width: 100%;
+  min-height: 450px;
+  position: relative;
+}
+
+.interactive-map-wrapper {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.interactive-map-canvas {
+  display: block;
+  width: 100%;
+  height: 450px;
+  cursor: grab;
+}
+
+.interactive-map-canvas:active {
+  cursor: grabbing;
+}
+
+/* Map Controls */
+.map-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.map-zoom-controls {
+  display: flex;
+  gap: 4px;
+  background: rgba(13, 17, 23, 0.9);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.map-btn {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.map-btn:hover {
+  background: var(--rust);
+  color: white;
+  border-color: var(--rust);
+}
+
+.map-layer-controls {
+  background: rgba(13, 17, 23, 0.9);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.layer-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.layer-toggle:hover {
+  color: var(--text-primary);
+}
+
+.layer-toggle input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--rust);
+  cursor: pointer;
+}
+
+.toggle-label {
+  white-space: nowrap;
+}
+
+/* Map Tooltip */
+.map-tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(13, 17, 23, 0.95);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  pointer-events: none;
+  z-index: 100;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.map-tooltip .tooltip-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-highlight);
+  margin-bottom: 4px;
+}
+
+.map-tooltip .tooltip-type {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.map-tooltip .tooltip-tier {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.map-tooltip .tooltip-tier.tier-green {
+  background: rgba(46, 160, 67, 0.3);
+  color: #7ee787;
+}
+
+.map-tooltip .tooltip-tier.tier-yellow {
+  background: rgba(210, 153, 34, 0.3);
+  color: #d29922;
+}
+
+.map-tooltip .tooltip-tier.tier-red {
+  background: rgba(248, 81, 73, 0.3);
+  color: #f85149;
+}
+
+/* Map Legend */
+.map-legend {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 12px;
+  background: rgba(13, 17, 23, 0.9);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-secondary);
+  z-index: 10;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-dot.green { background: #2ea043; }
+.legend-dot.yellow { background: #d29922; }
+.legend-dot.red { background: #f85149; }
+
+.legend-icon {
+  font-size: 14px;
+  color: #58a6ff;
+}
+
+/* Map Card Override - replace placeholder with interactive map */
+.map-card .interactive-map-container {
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .interactive-map-canvas {
+    height: 350px;
+  }
+
+  .map-controls {
+    top: 5px;
+    right: 5px;
+  }
+
+  .map-layer-controls {
+    display: none;
+  }
+
+  .map-legend {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .map-zoom-controls {
+    padding: 4px;
+  }
+
+  .map-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-map-canvas {
+    height: 280px;
+  }
+
+  .map-legend {
+    bottom: 5px;
+    left: 5px;
+    gap: 6px;
+  }
+
+  .legend-item:nth-child(4) {
+    display: none;
+  }
+}
