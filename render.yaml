@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: arc-raiders-wiki
+    runtime: static
+    staticPublishPath: .
+    buildCommand: echo "No build needed"
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

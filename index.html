@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Ultimate Raider's Guide - Your complete survival companion for Arc Raiders. Weapons, enemies, maps, skills, and extraction tactics.">
+  <title>ARC Raiders Wiki - The Ultimate Raider's Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          ARC RAIDERS
+          <span>━━ WIKI ━━</span>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="sidebar-search">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" placeholder="Search all pages..." aria-label="Search">
+          <div class="search-results" role="listbox"></div>
+        </div>
+      </div>
+
+      <!-- Favorites -->
+      <div class="sidebar-favorites">
+        <div class="favorites-header">
+          <div class="favorites-title">
+            <span>★</span> FAVORITES <span class="favorites-count">0</span>
+          </div>
+        </div>
+        <ul class="favorites-list">
+          <li class="favorites-empty">No favorites yet</li>
+        </ul>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <div class="nav-section-label">Navigation</div>
+          <a href="index.html" class="nav-link active">
+            <span class="nav-link-icon">⌂</span> Home
+          </a>
+          <a href="overview.html" class="nav-link">
+            <span class="nav-link-icon">◈</span> Overview
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Intel Database</div>
+          <a href="maps.html" class="nav-link">
+            <span class="nav-link-icon">◎</span> Maps
+          </a>
+          <a href="weapons.html" class="nav-link">
+            <span class="nav-link-icon">⚔</span> Weapons
+          </a>
+          <a href="enemies.html" class="nav-link">
+            <span class="nav-link-icon">☠</span> Enemies
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Raider Progression</div>
+          <a href="skills.html" class="nav-link">
+            <span class="nav-link-icon">◆</span> Skills
+          </a>
+          <a href="crafting.html" class="nav-link">
+            <span class="nav-link-icon">⚙</span> Crafting
+          </a>
+          <a href="traders.html" class="nav-link">
+            <span class="nav-link-icon">◇</span> Traders
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Survival Guide</div>
+          <a href="extraction.html" class="nav-link">
+            <span class="nav-link-icon">↑</span> Extraction
+          </a>
+          <a href="tips.html" class="nav-link">
+            <span class="nav-link-icon">✦</span> Tips
+          </a>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-section-label">Archives</div>
+          <a href="lore.html" class="nav-link">
+            <span class="nav-link-icon">☰</span> Lore
+          </a>
+        </div>
+      </nav>
+
+      <!-- Tools -->
+      <div class="sidebar-tools">
+        <button class="tool-button" id="loadout-builder-btn">
+          <span>⚙</span> Loadout Builder
+        </button>
+        <div class="recent-pages">
+          <div class="recent-label">Recently Visited</div>
+          <ul class="recent-list" id="recent-pages-list">
+            <li><span class="text-dim">—</span></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            SPERANZA DATALINK ACTIVE
+          </div>
+          <h1 class="hero-title">THE ULTIMATE RAIDER'S GUIDE</h1>
+          <p class="hero-subtitle">Your complete survival companion for the Rust Belt. Master weapons, outmaneuver ARC threats, and extract alive.</p>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">19+</div>
+              <div class="stat-label">Weapons</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">15+</div>
+              <div class="stat-label">ARC Types</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">5</div>
+              <div class="stat-label">Maps</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">45</div>
+              <div class="stat-label">Skills</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">66+</div>
+              <div class="stat-label">Quests</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Updates Box -->
+        <div class="updates-box">
+          <div class="updates-title">⚡ Latest Updates</div>
+          <ul class="updates-list">
+            <li><span class="update-tag new">New</span> Stella Montis Map Added!</li>
+            <li><span class="update-tag new">New</span> Matriarch & Shredder Enemies</li>
+            <li><span class="update-tag balance">Balance</span> Venator Nerfed</li>
+            <li><span class="update-tag event">Event</span> Snowfall Condition (December)</li>
+          </ul>
+        </div>
+
+        <!-- Quick Access Cards -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Quick Access</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-3">
+            <a href="maps.html" class="card card-rust quick-card">
+              <div class="quick-card-icon">◎</div>
+              <div class="quick-card-title">Maps</div>
+              <div class="quick-card-desc">Explore 5 deadly locations across the Rust Belt. POIs, extraction points, and loot zones.</div>
+            </a>
+
+            <a href="weapons.html" class="card card-rust quick-card">
+              <div class="quick-card-icon">⚔</div>
+              <div class="quick-card-title">Weapons</div>
+              <div class="quick-card-desc">Master your arsenal. Tier lists, damage stats, and recommended loadouts.</div>
+            </a>
+
+            <a href="enemies.html" class="card card-rust quick-card">
+              <div class="quick-card-icon">☠</div>
+              <div class="quick-card-title">Enemies</div>
+              <div class="quick-card-desc">Know your threats. Weak points, behaviors, and counter-strategies for every ARC.</div>
+            </a>
+
+            <a href="skills.html" class="card card-rust quick-card">
+              <div class="quick-card-icon">◆</div>
+              <div class="quick-card-title">Skills</div>
+              <div class="quick-card-desc">Build your Raider. Interactive skill tree with recommended builds.</div>
+            </a>
+
+            <a href="crafting.html" class="card card-rust quick-card">
+              <div class="quick-card-icon">⚙</div>
+              <div class="quick-card-title">Crafting</div>
+              <div class="quick-card-desc">Forge your gear. Workshop stations, blueprints, and material farming.</div>
+            </a>
+
+            <a href="extraction.html" class="card card-rust quick-card">
+              <div class="quick-card-icon">↑</div>
+              <div class="quick-card-title">Extraction</div>
+              <div class="quick-card-desc">Get out alive. Methods, tactics, and survival strategies.</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Getting Started</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="steps-container">
+            <div class="card step-card">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Learn the Basics</h4>
+                <p>Understand the core gameplay loop, Speranza, and what makes Arc Raiders unique.</p>
+                <a href="overview.html" class="step-link text-safe">Read Overview</a>
+              </div>
+            </div>
+
+            <div class="card step-card">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Choose Your Loadout</h4>
+                <p>Pick your weapons wisely. Heavy ammo for ARC, shotguns for players.</p>
+                <a href="weapons.html" class="step-link text-safe">Browse Weapons</a>
+              </div>
+            </div>
+
+            <div class="card step-card">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Master Extraction</h4>
+                <p>Dead Raiders extract nothing. Learn when to fight and when to run.</p>
+                <a href="extraction.html" class="step-link text-safe">Survival Guide</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Threat Overview -->
+        <section class="mb-4">
+          <div class="section-header">
+            <h2 class="section-title">Threat Overview</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="card-grid card-grid-4">
+            <div class="card">
+              <div class="threat-indicator mb-1">
+                <span class="threat-dot safe"></span>
+                <span>Low Threat</span>
+              </div>
+              <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0;">Ticks, Pops, Snitches, Wasps</p>
+            </div>
+
+            <div class="card">
+              <div class="threat-indicator mb-1">
+                <span class="threat-dot caution"></span>
+                <span>Medium Threat</span>
+              </div>
+              <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0;">Hornets, Turrets, Bison, Leapers</p>
+            </div>
+
+            <div class="card">
+              <div class="threat-indicator mb-1">
+                <span class="threat-dot danger"></span>
+                <span>High Threat</span>
+              </div>
+              <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0;">Rocketeers, Bastions, Bombardiers</p>
+            </div>
+
+            <div class="card">
+              <div class="threat-indicator mb-1">
+                <span class="threat-dot boss"></span>
+                <span>Boss Tier</span>
+              </div>
+              <p class="text-secondary" style="font-size: 0.85rem; margin-bottom: 0;">The Queen, Matriarch</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pro Tips Teaser -->
+        <section>
+          <div class="section-header">
+            <h2 class="section-title">Quick Tips</h2>
+            <div class="section-line"></div>
+            <a href="tips.html" class="btn btn-ghost">View All →</a>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <h4 class="mb-1">♻️ Recycle Everything</h4>
+              <p class="text-secondary" style="margin-bottom: 0;">Never sell junk items. Toasters, fans, and radios recycle into Metal Parts and Wires - the real currency of progression.</p>
+            </div>
+
+            <div class="card">
+              <h4 class="mb-1">📍 Blueprint Protocol</h4>
+              <p class="text-secondary" style="margin-bottom: 0;">Found a blueprint? Stop everything. Safe Pocket it immediately. Head to extraction. Permanent unlocks > any material.</p>
+            </div>
+
+            <div class="card">
+              <h4 class="mb-1">🎯 Heavy Ammo for ARC</h4>
+              <p class="text-secondary" style="margin-bottom: 0;">Light ammo bounces off armored ARC. Always bring a Ferro or Anvil for Bastions and Rocketeers.</p>
+            </div>
+
+            <div class="card">
+              <h4 class="mb-1">🔊 Sound is Intelligence</h4>
+              <p class="text-secondary" style="margin-bottom: 0;">Footsteps, gunfire, car alarms - audio cues reveal more than your eyes. Use headphones, enable 3D Audio.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Loadout Builder Modal -->
+  <div class="modal-overlay" id="loadout-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">LOADOUT BUILDER</h3>
+        <button class="modal-close" aria-label="Close modal">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Primary Weapon</label>
+          <select class="form-select" id="loadout-primary">
+            <option value="">Select weapon...</option>
+            <option value="ferro">Ferro (Heavy, 40 dmg)</option>
+            <option value="bettina">Bettina (Heavy, 28 dmg)</option>
+            <option value="osprey">Osprey (Medium, 24 dmg)</option>
+            <option value="tempest">Tempest (Light, 18 dmg)</option>
+            <option value="vulcano">Vulcano (Shotgun, 55 dmg)</option>
+            <option value="rattler">Rattler (Light, 15 dmg)</option>
+            <option value="hullcracker">Hullcracker (Launcher, 100 dmg)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Secondary Weapon</label>
+          <select class="form-select" id="loadout-secondary">
+            <option value="">Select weapon...</option>
+            <option value="anvil">Anvil (Heavy, 45 dmg)</option>
+            <option value="venator">Venator (Medium, 2x18 dmg)</option>
+            <option value="stitcher">Stitcher (Light, 12 dmg)</option>
+            <option value="burletta">Burletta (Light, 14 dmg)</option>
+            <option value="hairpin">Hairpin (Light, 16 dmg)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Shield</label>
+          <select class="form-select" id="loadout-shield">
+            <option value="">Select shield...</option>
+            <option value="light">Light Shield (Fast, Low HP)</option>
+            <option value="medium">Medium Shield (Balanced)</option>
+            <option value="heavy">Heavy Shield (Slow, High HP)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Augment</label>
+          <select class="form-select" id="loadout-augment">
+            <option value="">Select augment...</option>
+            <option value="combat1">Combat Mk.1</option>
+            <option value="combat2">Combat Mk.2</option>
+            <option value="combat3">Combat Mk.3</option>
+            <option value="looting1">Looting Mk.1</option>
+            <option value="looting2">Looting Mk.2</option>
+            <option value="looting3">Looting Mk.3</option>
+            <option value="tactical1">Tactical Mk.1</option>
+            <option value="tactical2">Tactical Mk.2</option>
+            <option value="tactical3">Tactical Mk.3</option>
+          </select>
+        </div>
+
+        <div class="card bg-elevated mt-2" id="loadout-stats" style="display: none;">
+          <h4 class="mb-1">Loadout Stats</h4>
+          <p class="mono text-secondary" style="font-size: 0.85rem; margin-bottom: 0;" id="loadout-summary"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="loadout-clear">Clear</button>
+        <button class="btn btn-primary" id="loadout-copy">Copy Loadout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>
