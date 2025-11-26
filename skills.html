@@ -132,6 +132,49 @@
           <p class="page-subtitle">45 skills. 75 max points. No free respecs.</p>
         </section>
 
+        <!-- Interactive Skill Tree -->
+        <section class="mb-4" id="skill-tree">
+          <div class="section-header">
+            <h2 class="section-title">Interactive Skill Tree</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="skill-tree-container">
+            <div class="skill-tree-header">
+              <div id="skill-points-display" class="skill-points-display">
+                <span class="points-used">0</span> / 75 points
+              </div>
+              <div class="skill-tree-controls">
+                <button data-preset="solo-survivor" class="preset-btn">Solo</button>
+                <button data-preset="team-support" class="preset-btn">Team</button>
+                <button data-preset="pvp-hunter" class="preset-btn">PvP</button>
+                <button data-preset="speed-looter" class="preset-btn">Looter</button>
+                <button id="skill-tree-clear">Clear</button>
+              </div>
+            </div>
+
+            <canvas id="skill-tree-canvas" width="900" height="500"></canvas>
+
+            <div class="skill-tree-legend">
+              <div class="legend-item">
+                <span class="legend-dot mobility"></span> Mobility
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot conditioning"></span> Conditioning
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot survival"></span> Survival
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot essential"></span> Essential
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot selected"></span> Selected
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Priority Build Path -->
         <section class="mb-4">
           <div class="section-header">
@@ -515,5 +558,6 @@
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
   <script src="js/features.js"></script>
+  <script src="js/skill-tree.js"></script>
 </body>
 </html>

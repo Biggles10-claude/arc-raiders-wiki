@@ -1432,3 +1432,214 @@ td {
   white-space: nowrap;
   border: 0;
 }
+
+/* ------------------------------------------------------------
+   SKILL TREE
+   ------------------------------------------------------------ */
+.skill-tree-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-tree-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.skill-tree-controls button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: var(--radius-sm);
+}
+
+.skill-tree-controls button:hover {
+  background: var(--rust);
+  border-color: var(--rust);
+  color: #fff;
+}
+
+.skill-tree-controls button.preset-btn {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.skill-tree-controls button.preset-btn:hover {
+  background: var(--amber);
+  color: #000;
+}
+
+.skill-points-display {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.skill-points-display .points-used {
+  color: var(--safe);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+#skill-tree-canvas {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--radius-sm);
+}
+
+.skill-tooltip {
+  position: fixed;
+  z-index: 1000;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  max-width: 250px;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.skill-tooltip .tooltip-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.skill-tooltip .tooltip-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.skill-tooltip .tooltip-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  margin-bottom: 0.5rem;
+}
+
+.skill-tooltip .tooltip-status {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  text-align: center;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.skill-tooltip .tooltip-status.selected {
+  background: rgba(35, 134, 54, 0.3);
+  color: var(--safe);
+}
+
+.skill-tooltip .tooltip-status.available {
+  background: rgba(88, 166, 255, 0.2);
+  color: #58a6ff;
+}
+
+.skill-tooltip .tooltip-status.locked {
+  background: rgba(110, 118, 129, 0.2);
+  color: var(--text-dim);
+}
+
+.skill-message {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-elevated);
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  z-index: 1001;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.skill-tree-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-dot.mobility { background: #58a6ff; }
+.legend-dot.conditioning { background: #f78166; }
+.legend-dot.survival { background: #7ee787; }
+.legend-dot.essential { background: #f0883e; }
+.legend-dot.selected { background: #238636; }
+
+@media (max-width: 768px) {
+  #skill-tree-canvas {
+    height: 350px;
+  }
+
+  .skill-tree-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-tree-controls {
+    width: 100%;
+  }
+
+  .skill-tree-controls button {
+    flex: 1;
+    min-width: 80px;
+  }
+}
